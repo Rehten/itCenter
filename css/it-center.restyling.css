@@ -436,6 +436,11 @@ transition: color 0.1s ease-in-out 0.05s;
     align-items: center;
 }
 
+/*15th section*/
+.cursor-pointer {
+    cursor: pointer;
+}
+
 svg {
     z-index: 1;
 }
