@@ -7,17 +7,44 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/it-center.restyling.css">
+    <style>
+        /*Add fonts*/
+        @font-face {
+            font-family: acrom;
+            font-weight: bold;
+            src: url("./fonts/acrom900.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: acrom600;
+            src: url("./fonts/acrom600.otf") format('opentype');
+        }
+
+        @font-face {
+            font-family: acrom;
+            font-weight: initial;
+            src: url("./fonts/acrom300.otf") format('opentype');
+        }
+
+        body {
+            font-family: acrom, Lucida Grande, sans-serif;
+        }
+
+        .font-weight-bolder {
+            font-family: acrom600, Lucida Grande, sans-serif;;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid background-container px-0">
     <div class="col-md-12 border-bottom px-2">
         <div class="col-xl-10 offset-xl-1 col-lg-12">
             <!-- TODO: fix nav-links colors -->
-            <nav class="navbar navbar-expand-lg navbar-dark rounded bg-transparent px-xl-5 px-lg-3 px-md-0 mx-xl-5 mx-lg-3 mx-md-0">
-                <a class="navbar-brand" href="#">
+            <nav class="navbar navbar-expand-lg navbar-dark rounded bg-transparent mx-xl-5 mx-lg-3 mx-md-0">
+                <a class="navbar-brand pt-0 pb-2" href="#">
                     <img height="32"
-                        src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAAmCAQAAAASeK28AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwcPISNoi3HsAAABqUlEQVRo3u2b4Y2DMAyFnRMLdAVWYAU6QldghWOEuxW6AiMcK2QFVrgRcj8OUEupYoJNsPS+/qhAcXjpK44JiguBZHHC/YGZgmR/XmnrwQMfuQUAPjDLEGpmBbufOvzzmVPFoWYBeRZmzf+q+vUI5AZ3liFgliGKxfFA7fgNTsfCLDfQd25J4B3F/i6SKOm2oXVHg2qMp37lLK+s6sYsJKxupXjveGZV0VUk7343SCUq6WtDaz8OTSumfWMWxy4/m6U+ooVZoaYfIiK6ukf58S6vq8MFoqAaNESuOWviTh2jlVeOqcZ80j5FpVxHdUQ8s9oXSTHJXIaE9CkfU42z02X3dcTUrb234pnlHWakE5A7DaZQMqu0bfWpAXV6Zk115ZL976UbahitctWniupQDRoCZhlCLw1OS8Ly9KwUkmspWlGdpllaS8L9qRebFdUhDRoCZhmClwZvoYq06FzaHNGwnkqeV1BSYo7SpqqOZ1b8ycEnTugllYxWl90xR2lTVYc0aAiYZQgXgvDGBOwiUQN3liFgliFgliFgliFgliFgliEKwj5gM/wBXCYbrpYKPFMAAAAASUVORK5CYII="
-                        alt="No image found">
+                         src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAAmCAQAAAASeK28AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwcPISNoi3HsAAABqUlEQVRo3u2b4Y2DMAyFnRMLdAVWYAU6QldghWOEuxW6AiMcK2QFVrgRcj8OUEupYoJNsPS+/qhAcXjpK44JiguBZHHC/YGZgmR/XmnrwQMfuQUAPjDLEGpmBbufOvzzmVPFoWYBeRZmzf+q+vUI5AZ3liFgliGKxfFA7fgNTsfCLDfQd25J4B3F/i6SKOm2oXVHg2qMp37lLK+s6sYsJKxupXjveGZV0VUk7343SCUq6WtDaz8OTSumfWMWxy4/m6U+ooVZoaYfIiK6ukf58S6vq8MFoqAaNESuOWviTh2jlVeOqcZ80j5FpVxHdUQ8s9oXSTHJXIaE9CkfU42z02X3dcTUrb234pnlHWakE5A7DaZQMqu0bfWpAXV6Zk115ZL976UbahitctWniupQDRoCZhlCLw1OS8Ly9KwUkmspWlGdpllaS8L9qRebFdUhDRoCZhmClwZvoYq06FzaHNGwnkqeV1BSYo7SpqqOZ1b8ycEnTugllYxWl90xR2lTVYc0aAiYZQgXgvDGBOwiUQN3liFgliFgliFgliFgliFgliEKwj5gM/wBXCYbrpYKPFMAAAAASUVORK5CYII="
+                         alt="No image found">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
                         aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +69,8 @@
                             <a class="nav-link text-light text-center" href="#">ОТЗЫВЫ</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center active">
-                            <a class="nav-link text-light text-center" href="#">+3 (8044) 237-37-07<br>+3 (8063) 237-37-07</a>
+                            <a class="nav-link text-light text-center" href="#">+3 (8044) 237-37-07<br>+3 (8063)
+                                237-37-07</a>
                         </li>
                     </ul>
                 </div>
@@ -51,17 +79,18 @@
     </div>
     <!-- First block TODO: fix mobile version -->
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent text-light">
-        <div class="col-lg-8 my-5 offset-lg-2 col-md-12 mx-auto ">
-            <h1 class="display-4 font-weight-bold text-uppercase text-center">Курс основы программирования на языке
+        <div class="col-xl-6 col-lg-8 mt-5 mb-4 pt-2 offset-lg-2 col-md-10 col-sm-12 mx-auto ">
+            <h1 class="font-weight-bold text-uppercase text-center">Курс основы программирования на языке
                 Java</h1>
-            <p class="lead font-weight-normal mt-5 text-uppercase">Курс рассчитан на людей с нулевым уровнем знаний</p>
+            <h5 class="font-weight-bolder mt-5 text-uppercase">Курс рассчитан на людей с нулевым уровнем знаний</h5>
         </div>
         <div class="col-md-8 p-3 p-md-4 my-md-3 offset-md-2 mx-auto ">
             <p class="lead font-weight-normal mt-4">Старт: 15.01.2018 <span> | </span> СБ. ВС. с 11:00 - 14:00</p>
-            <p class="font-weight-normal text-uppercase">Идет набор осталось <span class="text-danger">4</span> места
+            <p class="font-weight-normal text-uppercase">Идет набор осталось <span class="text-danger font-weight-bold">4</span>
+                места
             </p>
-            <a class="btn btn-outline-light btn-lg text-uppercase col-lg-4 col-md-6 rounded-0 p-2"
-               href="#">Записаться</a>
+            <a class="btn btn-outline-light text-uppercase col-xl-3 col-lg-4 col-md-6 rounded-0 p-2"
+               href="#"><span class="h6">Записаться</span></a>
         </div>
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -69,22 +98,18 @@
 </div>
 <div class="container-fluid">
     <!-- Second block -->
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-        <div class="col-lg-12">
-            <div class="col-lg-12 my-5 mx-auto">
-                <h1 class="font-weight-bold text-uppercase">Почему стоит изучать Java</h1>
+    <div class="position-relative overflow-hidden text-center">
+        <div class="col-lg-12 mt-5 pt-5">
+            <div class="col-lg-12 mb-5 pb-5 mx-auto">
+                <h1 class="font-weight-bolder text-uppercase">Почему стоит изучать Java</h1>
             </div>
-            <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row">
+            <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 row">
                 <div class="col-lg-6 col-md-10 offset-md-1 offset-lg-0">
                     <div class="darken-container">
                         <div class="darken-photo">
                             <div class="darken-background darken-right pt-lg-2">
-                                <h4 class="text-light px-3">Самый востребованный и популярный язык в мире</h4>
-                            </div>
-                            <div class="darken-slider">
-                                <h6 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Accusantium eos ex incidunt itaque neque officia sit. Cum deserunt dolor magni neque
-                                    nihil nulla, odit placeat praesentium quae ratione. Accusantium, laborum.</h6>
+                                <h6 class="animated text-light px-3 py-5 text-uppercase">Самый востребованный и
+                                    популярный язык в мире</h6>
                             </div>
                             <img class="darken-image darken-left" src="images/why-learn/b2foto1.jpg" alt="">
                         </div>
@@ -94,14 +119,9 @@
                     <div class="darken-container place-right">
                         <div class="darken-photo">
                             <div class="darken-background darken-left">
-                                <h4 class="text-light px-3">Более 80% гаджетов работают на Java, от микроволновых печей
-                                    до смартфонов</h4>
-                            </div>
-                            <div class="darken-slider">
-                                <h6 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                                    asperiores atque consequuntur dignissimos excepturi explicabo fugit in, ipsam iste
-                                    iusto libero magnam nobis quae quisquam reprehenderit tempora, temporibus unde
-                                    voluptatum.</h6>
+                                <h6 class="animated text-light px-3 py-5 text-uppercase">Более 80% гаджетов работают на
+                                    Java, от микроволновых печей
+                                    до смартфонов</h6>
                             </div>
                             <img class="darken-image darken-right" src="images/why-learn/b2foto2.jpg" alt="">
                         </div>
@@ -111,13 +131,8 @@
                     <div class="darken-container">
                         <div class="darken-photo">
                             <div class="darken-background darken-right pt-lg-2">
-                                <h4 class="text-light px-3">Платформа Android Основана на Java</h4>
-                            </div>
-                            <div class="darken-slider">
-                                <h6 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Architecto, et, eveniet exercitationem expedita id impedit incidunt nostrum odit
-                                    praesentium provident rerum suscipit tenetur voluptatibus? At corporis illum nemo
-                                    nostrum officiis.</h6>
+                                <h6 class="animated text-light px-3 py-5 text-uppercase">Платформа Android Основана на
+                                    Java</h6>
                             </div>
                             <img class="darken-image darken-left" src="images/why-learn/b2foto3.jpg" alt="">
                         </div>
@@ -127,12 +142,8 @@
                     <div class="darken-container place-right">
                         <div class="darken-photo">
                             <div class="darken-background darken-left pt-lg-2">
-                                <h4 class="text-light px-3">Самый востребованный и популярный язык в мире</h4>
-                            </div>
-                            <div class="darken-slider">
-                                <h6 class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-                                    consequuntur corporis cumque, ea, fugiat impedit itaque labore libero natus numquam
-                                    omnis quasi quisquam quos rem rerum saepe sapiente similique voluptatibus.</h6>
+                                <h6 class="animated text-light px-3 py-5 text-uppercase">Самый востребованный и
+                                    популярный язык в мире</h6>
                             </div>
                             <img class="darken-image darken-right" src="images/why-learn/b2foto4.jpg" alt="">
                         </div>
@@ -145,10 +156,10 @@
 <div class="container-fluid">
     <!-- Third block -->
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-        <div class="col-md-8 my-5 offset-md-2 mx-auto">
-            <h1 class="font-weight-bold text-uppercase">Развитие твоей карьеры в Java</h1>
+        <div class="col-md-12 mt-3 mb-5 pb-5 mx-auto">
+            <h1 class="font-weight-bolder text-uppercase">Развитие твоей карьеры в Java</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 career-way mt-5 pt-5 row">
+        <div class="lg-show col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 career-way mt-5 pt-5 row">
             <div class="col-lg-3">
                 <div class="career-step">
                     <img class="step-image pl-5 ml-5" src="images/career/b3foto1.png" alt="">
@@ -156,21 +167,21 @@
             </div>
             <div class="col-lg-3">
                 <div class="career-currency correct-junior">
-                    <h4>400-800$</h4>
+                    <h5 class="text-muted">400-800$</h5>
                 </div>
-                <div class="career-time pl-xl-5 pl-lg-5 ml-xl-3 ml-lg-0">
-                    <h6 class="text-uppercase">Спустя<br> 8 месяцев</h6>
+                <div class="career-time pl-xl-3 pl-lg-5 ml-xl-3 ml-lg-0">
+                    <h6 class="small text-uppercase">Спустя<br> 8 месяцев</h6>
                 </div>
                 <div class="career-step">
                     <img class="step-image mr-5 pr-5" src="images/career/b3foto2.png" alt="">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="career-currency">
-                    <h4>1300-2300$</h4>
+                <div class="career-currency correct-middle">
+                    <h5 class="text-muted">1300-2300$</h5>
                 </div>
-                <div class="career-time ml-xl-5 ml-lg-4">
-                    <h6 class="text-uppercase">Спустя<br> 1-2 года</h6>
+                <div class="career-time ml-xl-4 pl-xl-3 pl-lg-3 ml-lg-4">
+                    <h6 class="small text-uppercase">Спустя<br> 1-2 года</h6>
                 </div>
                 <div class="career-step">
                     <img class="step-image mr-5 pr-5" src="images/career/b3foto3.png" alt="">
@@ -178,10 +189,10 @@
             </div>
             <div class="col-lg-3">
                 <div class="career-currency correct-senior">
-                    <h4>2700-4000$</h4>
+                    <h5 class="text-muted">2700-4000$</h5>
                 </div>
-                <div class="career-time ml-2">
-                    <h6 class="text-uppercase">Спустя<br> 2-4 года</h6>
+                <div class="career-time">
+                    <h6 class="small text-uppercase">Спустя<br> 2-4 года</h6>
                 </div>
                 <div class="career-step">
                     <img class="step-image mr-5 pr-5" src="images/career/b3foto4.png" alt="">
@@ -205,40 +216,59 @@
                 </div>
             </div>
         </div>
+        <div class="md-show col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mb-5 pb-5 career-way mx-auto row">
+            <div id="carouselExampleSlidesOnly" class="carousel slide mx-auto" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item carousel-item--career active">
+                        <img class="step-image pl-5 ml-5" src="images/career/b3foto1.png" alt="">
+                    </div>
+                    <div class="carousel-item carousel-item--career">
+                        <img class="step-image mr-5 pr-5" src="images/career/b3foto2.png" alt="">
+                    </div>
+                    <div class="carousel-item carousel-item--career">
+                        <img class="step-image mr-5 pr-5" src="images/career/b3foto3.png" alt="">
+                    </div>
+                    <div class="carousel-item carousel-item--career">
+                        <img class="step-image mr-5 pr-5" src="images/career/b3foto4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <div class="container-fluid">
     <!-- Fourth block -->
     <div class="position-relative overflow-hidden text-center">
-        <div class="col-md-8 my-5 offset-md-2 mx-auto">
-            <h1 class="font-weight-bold text-uppercase">Для кого наши курсы?</h1>
+        <div class="col-md-12 mb-5 pb-5 offset-md-2 mx-auto">
+            <h1 class="font-weight-bolder text-uppercase">Для кого наши курсы?</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row">
-            <div class="col-lg-6 p-4">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 row">
+            <div class="col-lg-6 offset-lg-0 col-md-10 offset-md-1 p-4">
                 <div class="course-auditory-image col-lg-12 border-dark border-bottom border-top border-left border-right">
-                    <h5 class="auditory-description"><span>Для тех, кто ранее не сталкивался с программированием, и хочет в короткие сроки разобраться в основах языка Java.</span>
-                    </h5>
+                    <h6 class="auditory-description"><span>Для тех, кто ранее не сталкивался с программированием, и хочет в короткие сроки разобраться в основах языка Java.</span>
+                    </h6>
                     <img class="col-md-12 offset-md-0" src="images/for-whoes/b4foto1.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 p-4">
+            <div class="col-lg-6 offset-lg-0 col-md-10 offset-md-1 p-4">
                 <div class="course-auditory-image col-lg-12 border-dark border-bottom border-top border-left border-right">
-                    <h5 class="auditory-description"><span>Для тех, кто пытается освоить Java, но испытывает трудности. Кто владеет базовыми знаниями и желает разложить их по полочкам</span>
-                    </h5>
+                    <h6 class="auditory-description"><span>Для тех, кто пытается освоить Java, но испытывает трудности. Кто владеет базовыми знаниями и желает разложить их по полочкам</span>
+                    </h6>
                     <img class="col-md-12 offset-md-0" src="images/for-whoes/b4foto2.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 p-4">
+            <div class="col-lg-6 offset-lg-0 col-md-10 offset-md-1 p-4">
                 <div class="course-auditory-image col-lg-12 border-dark border-bottom border-top border-left border-right">
-                    <h5 class="auditory-description"><span>Для тех, кто ранее не сталкивался с программированием, и хочет в короткие сроки разобраться в основах языка Java.</span>
-                    </h5>
+                    <h6 class="auditory-description"><span>Для тех, кто ранее не сталкивался с программированием, и хочет в короткие сроки разобраться в основах языка Java.</span>
+                    </h6>
                     <img class="col-md-12 offset-md-0" src="images/for-whoes/b4foto3.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 p-4">
+            <div class="col-lg-6 offset-lg-0 col-md-10 offset-md-1 p-4">
                 <div class="course-auditory-image col-lg-12 border-dark border-bottom border-top border-left border-right">
-                    <h5 class="auditory-description"><span>Для тех, кто пытается освоить Java, но испытывает трудности. Кто владеет базовыми знаниями и желает разложить их по полочкам</span>
-                    </h5>
+                    <h6 class="auditory-description"><span>Для тех, кто пытается освоить Java, но испытывает трудности. Кто владеет базовыми знаниями и желает разложить их по полочкам</span>
+                    </h6>
                     <img class="col-md-12 offset-md-0" src="images/for-whoes/b4foto4.jpg" alt="">
                 </div>
             </div>
@@ -249,41 +279,41 @@
 <div class="container-fluid mt-5">
     <!-- Fifth block -->
     <div class="p-2 mx-md-3 mt-5  text-center">
-        <div class="col-md-12 my-5 mx-auto">
-            <h1 class="font-weight-bold text-uppercase">Формат обучения</h1>
+        <div class="col-md-12 my-5 pb-3 mx-auto">
+            <h1 class="font-weight-bolder text-uppercase">Формат обучения</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mt-5 format-division row p-0">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h5 class="text-uppercase text-format text-format-bottom">Длительность</h5>
-                <div class="col-lg-12 py-5 px-5 border border-dark">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 col-md-8 col-sm-10 mx-auto row">
+            <div class="col-lg-3 col-md-6 col-sm-6 offset-sm-0 offset-md-0 mb-5">
+                <h6 class="text-uppercase text-format text-format-bottom">Длительность</h6>
+                <div class="col-lg-12 py-3 px-3 border border-dark">
                     <h1 class="display-1 font-weight-bold">3</h1>
                 </div>
-                <h5 class="text-uppercase text-format mt-3">Недели</h5>
+                <h6 class="text-uppercase text-format mt-3">Недели</h6>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h5 class="text-uppercase text-format text-format-bottom">Количество часов</h5>
-                <div class="col-lg-12 py-5 px-5 border border-dark">
+            <div class="col-lg-3 col-md-6 col-sm-6 offset-sm-0 offset-md-0 mb-5">
+                <h6 class="text-uppercase text-format text-format-bottom">Количество часов</h6>
+                <div class="col-lg-12 py-3 px-3 border border-dark">
                     <h1 class="display-1 font-weight-bold">8</h1>
                 </div>
-                <h5 class="text-uppercase text-format mt-3">2 раза в неделю<br> по 3 часа</h5>
+                <h6 class="text-uppercase text-format mt-3">2 раза в неделю<br> по 3 часа</h6>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h5 class="text-uppercase text-format text-format-bottom">Количество в группе</h5>
-                <div class="col-lg-12 py-5 px-5 border border-dark">
+            <div class="col-lg-3 col-md-6 col-sm-6 offset-sm-0 offset-md-0 mb-5">
+                <h6 class="text-uppercase text-format text-format-bottom">Количество в группе</h6>
+                <div class="col-lg-12 py-3 px-3 border border-dark">
                     <h1 class="display-1 font-weight-bold">15</h1>
                 </div>
-                <h5 class="text-uppercase text-format mt-3">группы до<br> 15 человек</h5>
+                <h6 class="text-uppercase text-format mt-3">группы до<br> 15 человек</h6>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <h5 class="text-uppercase text-format text-format-bottom">Для обучения <span class="text-danger">необходим:</span>
-                </h5>
-                <div class="col-lg-12 py-5 px-5 border border-dark format-image format-grow-2">
-                    <h5 class="text-uppercase text-danger text-center mt-5 pt-5 position-absolute">Ноутбук</h5>
+            <div class="col-lg-3 col-md-6 col-sm-6 offset-sm-0 offset-md-0 mb-5">
+                <h6 class="text-uppercase text-format text-format-bottom">Для обучения <span class="text-danger">необходим:</span>
+                </h6>
+                <div class="col-lg-12 py-3 px-3 border border-dark format-image format-grow-2">
+                    <h6 class="text-uppercase text-danger text-center mt-5 pt-0 position-absolute">Ноутбук</h6>
                     <h1 class="display-1 font-weight-bold text-center">
-                        <img class="" src="./images/format/b5foto.png" alt="No image">
+                        <img height="101" class="pb-4" src="./images/format/b5foto.png" alt="No image">
                     </h1>
                 </div>
-                <h5 class="text-uppercase text-format mt-3">Недели <br>&nbsp;</h5>
+                <h6 class="text-uppercase text-format mt-3">Недели <br>&nbsp;</h6>
             </div>
         </div>
     </div>
@@ -291,11 +321,11 @@
 
 <div class="container-fluid mt-5">
     <!-- Sixth block -->
-    <div class="p-2 m-md-3 mx-md-3 mt-5 text-center">
-        <div class="col-md-8 offset-md-2 mx-auto">
-            <h1 class="font-weight-bold text-uppercase">Как проходит процесс обучения</h1>
+    <div class="p-2 m-md-3 mx-md-3 mt-5 pb-3 text-center text-uppercase">
+        <div class="col-md-12 offset-md-2 mb-5 pb-5 mx-auto">
+            <h1 class="font-weight-bolder text-uppercase">Как проходит процесс обучения</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mt-5 format-division row">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 format-division row small">
             <div class="col-lg-3 col-md-3">
                 <div class="col-lg-12 format-graph filled-background">Начало</div>
                 <div class="graph-arrow"></div>
@@ -310,7 +340,7 @@
                 <div class="col-lg-12 format-graph border border-dark">Группа в скайпе</div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mt-5 format-division row">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 format-division row small">
             <div class="col-lg-3 col-md-3">
                 <div class="col-lg-12 format-graph filled-background">На занятии</div>
                 <div class="graph-arrow"></div>
@@ -325,7 +355,7 @@
                 <div class="col-lg-12 format-graph border border-dark">Практика 60%</div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mt-5 format-division row">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 format-division row small">
             <div class="col-lg-3 col-md-3">
                 <div class="col-lg-12 format-graph filled-background">Между занятиями</div>
                 <div class="graph-arrow"></div>
@@ -340,7 +370,7 @@
                 <div class="col-lg-12 format-graph border border-dark">Работа над д/з</div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 mt-5 format-division row">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 format-division row small">
             <div class="col-lg-3 col-md-3">
                 <div class="col-lg-12 format-graph filled-background">После обучения</div>
                 <div class="graph-arrow"></div>
@@ -361,75 +391,87 @@
 <div class="container-fluid mt-5">
     <!-- Seventh block -->
     <div class="p-2 m-md-3 mt-5 text-center">
-        <div class="col-md-8 offset-md-2 mx-auto">
-            <h1 class="font-weight-bold text-uppercase text-center">Программа курса Java основы</h1>
+        <div class="col-md-12 offset-md-2 pb-4 my-5 mx-auto">
+            <h1 class="font-weight-bolder text-uppercase text-center">Программа курса Java основы</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 col-md-10 offset-md-1 mt-5 row text-left">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 text-left row">
             <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3">Занятие 1</div>
-                <h5 class="font-weight-bold mt-5">1. Инструментарий разработчика</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Установка JRE, JDK 8.</h6>
-                    <h6>-Установка Eclipse</h6>
-                    <h6>-Написание первой программы на Java</h6>
+                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    Занятие 1
                 </div>
-                <h5 class="font-weight-bold mt-3">2. Переменные</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Назначение переменных</h6>
-                    <h6>-Основные операции с переменными</h6>
-                    <h6>-Особенности работы с переменными</h6>
+                <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left underline">1. Инструментарий
+                    разработчика</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Установка JRE, JDK 8.</h6>
+                    <h6 class="text-md-center text-lg-left">-Установка Eclipse</h6>
+                    <h6 class="text-md-center text-lg-left">-Написание первой программы на Java</h6>
                 </div>
-                <h5 class="font-weight-bold mt-3">3. Операции над переменными</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Арифметические операции</h6>
-                    <h6>-Инкремент и декремент</h6>
-                    <h6>-Особенности постфиксных и префиксных операций</h6>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">2. Переменные</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Назначение переменных</h6>
+                    <h6 class="text-md-center text-lg-left">-Основные операции с переменными</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности работы с переменными</h6>
+                </div>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">3. Операции над
+                    переменными</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Арифметические операции</h6>
+                    <h6 class="text-md-center text-lg-left">-Инкремент и декремент</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности постфиксных и префиксных операций</h6>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3">Занятие 2</div>
-                <h5 class="font-weight-bold mt-5">1. Инструментарий разработчика</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Установка JRE, JDK 8.</h6>
-                    <h6>-Установка Eclipse</h6>
-                    <h6>-Написание первой программы на Java</h6>
+                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    Занятие 2
                 </div>
-                <h5 class="font-weight-bold mt-3">2. Переменные</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Назначение переменных</h6>
-                    <h6>-Основные операции с переменными</h6>
-                    <h6>-Особенности работы с переменными</h6>
+                <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left underline">1. Инструментарий
+                    разработчика</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Установка JRE, JDK 8.</h6>
+                    <h6 class="text-md-center text-lg-left">-Установка Eclipse</h6>
+                    <h6 class="text-md-center text-lg-left">-Написание первой программы на Java</h6>
                 </div>
-                <h5 class="font-weight-bold mt-3">3. Операции над переменными</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Арифметические операции</h6>
-                    <h6>-Инкремент и декремент</h6>
-                    <h6>-Особенности постфиксных и префиксных операций</h6>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">2. Переменные</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Назначение переменных</h6>
+                    <h6 class="text-md-center text-lg-left">-Основные операции с переменными</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности работы с переменными</h6>
+                </div>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">3. Операции над
+                    переменными</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Арифметические операции</h6>
+                    <h6 class="text-md-center text-lg-left">-Инкремент и декремент</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности постфиксных и префиксных операций</h6>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3">Занятие 3</div>
-                <h5 class="font-weight-bold mt-5">1. Инструментарий разработчика</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Установка JRE, JDK 8.</h6>
-                    <h6>-Установка Eclipse</h6>
-                    <h6>-Написание первой программы на Java</h6>
+                <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    Занятие 3
                 </div>
-                <h5 class="font-weight-bold mt-3">2. Переменные</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Назначение переменных</h6>
-                    <h6>-Основные операции с переменными</h6>
-                    <h6>-Особенности работы с переменными</h6>
+                <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left underline">1. Инструментарий
+                    разработчика</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Установка JRE, JDK 8.</h6>
+                    <h6 class="text-md-center text-lg-left">-Установка Eclipse</h6>
+                    <h6 class="text-md-center text-lg-left">-Написание первой программы на Java</h6>
                 </div>
-                <h5 class="font-weight-bold mt-3">3. Операции над переменными</h5>
-                <div class="pl-5 mt-2">
-                    <h6>-Арифметические операции</h6>
-                    <h6>-Инкремент и декремент</h6>
-                    <h6>-Особенности постфиксных и префиксных операций</h6>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">2. Переменные</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Назначение переменных</h6>
+                    <h6 class="text-md-center text-lg-left">-Основные операции с переменными</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности работы с переменными</h6>
+                </div>
+                <h5 class="font-weight-bolder mt-3 text-md-center text-lg-left underline">3. Операции над
+                    переменными</h5>
+                <div class="pl-lg-3 mt-2">
+                    <h6 class="text-md-center text-lg-left">-Арифметические операции</h6>
+                    <h6 class="text-md-center text-lg-left">-Инкремент и декремент</h6>
+                    <h6 class="text-md-center text-lg-left">-Особенности постфиксных и префиксных операций</h6>
                 </div>
             </div>
             <div class="col-lg-12">
-                <h6 class="font-weight-bold text-uppercase text-center toggle-ref text-primary"><a>Смотреть полностью
+                <h6 class="font-weight-bolder text-uppercase text-center toggle-ref text-primary"><a>Смотреть полностью
                     программу курса</a></h6>
             </div>
         </div>
@@ -441,9 +483,9 @@
     <!-- Eighth block -->
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">После курса вы научитесь:</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">После курса вы научитесь:</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-left">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-5 text-left row">
             <div class="col-lg-4 col-md-6 offset-md-3 mb-md-2 mb-lg-0 offset-lg-0">
                 <div class="learn-block">
                     <div class="d-inline-flex">
@@ -472,7 +514,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-left">
+        <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 offset-md-0 mt-lg-5 text-left row">
             <div class="col-lg-4 col-md-6 offset-md-3 mb-md-2 mb-lg-0 offset-lg-0">
                 <div class="learn-block">
                     <div class="d-inline-flex">
@@ -508,7 +550,7 @@
     <!-- Nineth block -->
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Преподаватели:</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Преподаватели:</h1>
             <h6 class="font-weight-bold text-uppercase text-center">Все преподаватели с опытом работы от 3- лет</h6>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
@@ -516,43 +558,43 @@
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher1.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher2.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher3.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher3.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher1.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher2.png" alt="">
                 </div>
-                <h4 class="text-uppercase mt-3">Имя преподавателя</h4>
-                <p class="text-uppercase text-primary toggle-ref small">Смотреть о преподавателе</p>
+                <h4 class="text-uppercase mt-3 font-weight-bolder">Имя преподавателя</h4>
+                <p class="text-uppercase text-primary toggle-ref small font-weight-bolder">Смотреть о преподавателе</p>
             </div>
         </div>
     </div>
@@ -562,7 +604,7 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Отзывы учащихся</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Отзывы учащихся</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
             <h1 class=" text-center text-danger">Блок пропущен</h1>
@@ -574,7 +616,7 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Нас рекомендуют</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Нас рекомендуют</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
             <div class="col-sm-6">
@@ -591,7 +633,7 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Наши студенты работают в:</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Наши студенты работают в:</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
             <div class="col-lg-3 col-sm-6 mb-5">
@@ -630,120 +672,120 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Стоимость обучения</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Стоимость обучения</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center mb-4">
-            <div class="col-lg-12 border border-dark mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center mb-4">
+            <div class="col-lg-12 border border-dark mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3">
                     <h5 class="font-weight-bold">Что входит</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3">
                     <h5 class="font-weight-bold text-center">STANDART</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3">
                     <h5 class="font-weight-bold text-center">VIP</h5>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">1</div>
                     <h5 class="pl-3 mt-2">Поддержка в Skype во время обучения</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">2</div>
                     <h5 class="pl-3 mt-2">Дополнительные видео материалы</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">3</div>
                     <h5 class="pl-3 mt-2">Дополнительные дни работы над д/з</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">4</div>
                     <h5 class="pl-3 mt-2">Индивидуальная консультация преподавателя в Skype</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#8722;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">5</div>
                     <h5 class="pl-3 mt-2">Возможность заморозить обучение</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#8722;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
                     <div class="package-info border border-dark">6</div>
                     <h5 class="pl-3 mt-2">Возможность пройти курс повторно</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#8722;</div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
+                <div class="col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-center align-items-center">
                     <div class="package-info border border-dark">&#10003;</div>
                 </div>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center ">
-            <div class="col-lg-12 mx-3 row px-5">
-                <div class="col-lg-8 text-left pb-lg-2 pt-lg-3 d-inline-flex justify-content-start align-items-center">
+        <div class="col-lg-10 col-md-8 col-sm-10 mx-auto row text-center ">
+            <div class="col-lg-12 mx-3 row px-1">
+                <div class="col-xl-8 col-lg-6 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-start align-items-center">
                     <h3 class="pl-3 mt-2 font-weight-bold text-uppercase">Стоимость:</h3>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
-                    <h5 class="pl-3 mt-2 font-weight-bold text-uppercase">1750 грн</h5>
-                    <div class="pl-3 ">
-                        <a class="btn btn-outline-light border border-dark rounded-0 text-uppercase">Записаться</a>
+                <div class="px-0 col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
+                    <h5 class="px-0 mt-2 font-weight-bold text-uppercase">1750 грн</h5>
+                    <div>
+                        <a class="px-2 btn btn-outline-light border border-dark rounded-0 text-uppercase">Записаться</a>
                     </div>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
-                    <h5 class="pl-3 mt-2 font-weight-bold text-uppercase">2500 грн</h5>
-                    <div class="pl-3 ">
-                        <a class="btn btn-outline-light border border-dark rounded-0 text-uppercase">Записаться</a>
+                <div class="px-0 col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
+                    <h5 class="px-0 mt-2 font-weight-bold text-uppercase">2500 грн</h5>
+                    <div>
+                        <a class="px-2 btn btn-outline-light border border-dark rounded-0 text-uppercase">Записаться</a>
                     </div>
                 </div>
             </div>
@@ -755,38 +797,34 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Дата начала обучения</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Дата начала обучения</h1>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
-            <div class="col-lg-12 border border-dark mx-3 row px-5">
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">Обучение по<br> будням</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">пн-вт<br>19:00 - 22:00</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">Старт<br>01.01.2018</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3 d-flex flex-column align-content-center justify-content-center">
-                    <a class="btn btn-outline-light border border-dark text-uppercase rounded-0">Записаться</a>
-                </div>
+        <div class="col-xl-8 col-md-10 col-sm-12 border border-dark row px-lg-5 px-sm-0 mx-auto">
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">Обучение по<br> будням</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">пн-вт<br>19:00 - 22:00</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">Старт<br>01.01.2018</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-2 pb-sm-1 pt-sm-1 d-flex flex-column align-content-center justify-content-center">
+                <a class="btn btn-outline-light border border-dark text-uppercase rounded-0">Записаться</a>
             </div>
         </div>
-        <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
-            <div class="col-lg-12 border-left border-right border-bottom border-dark mx-3 row px-5">
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">Обучение по<br> выходным</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">пн-вт<br>19:00 - 22:00</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3">
-                    <h5 class="text-center text-uppercase">Старт<br>01.01.2018</h5>
-                </div>
-                <div class="col-lg-3 text-left pb-lg-2 pt-lg-3 d-flex flex-column align-content-center justify-content-center">
-                    <a class="btn btn-outline-light border border-dark text-uppercase rounded-0">Записаться</a>
-                </div>
+        <div class="col-xl-8 col-md-10 col-sm-12 border-left border-right border-bottom border-dark row px-lg-5 px-sm-0 mx-auto">
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">Обучение по<br> выходным</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">пн-вт<br>19:00 - 22:00</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-3 pb-sm-1 pt-sm-2 d-flex flex-column justify-content-center">
+                <h6 class="text-center text-uppercase">Старт<br>01.01.2018</h6>
+            </div>
+            <div class="col-lg-3 col-sm-3 text-left pb-lg-2 pt-lg-2 pb-sm-1 pt-sm-1 d-flex flex-column align-content-center justify-content-center">
+                <a class="btn btn-outline-light border border-dark text-uppercase rounded-0">Записаться</a>
             </div>
         </div>
     </div>
@@ -796,64 +834,64 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Часто задаваемые вопросы</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Часто задаваемые вопросы</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-lg-8 border-top border-dark mx-auto row px-0">
-                <div class="col-lg-10 text-left pb-lg-2 pt-lg-3">
-                    <h6 class="text-left">Какая длительность занятия на вашем обучении?</h6>
+            <div class="col-sm-10 border-top border-dark mx-auto row px-0">
+                <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
+                    <h5 class="text-left">Какая длительность занятия на вашем обучении?</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
+                <div class="col-sm-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
                     <a class="text-right">
-                        <img src="./svg/plus.svg" alt="Image not found">
+                        <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-lg-8 border-top border-dark mx-auto row px-0">
-                <div class="col-lg-10 text-left pb-lg-2 pt-lg-3">
-                    <h6 class="text-left">Какое максимальное количество людей в группе?</h6>
+            <div class="col-sm-10 border-top border-dark mx-auto row px-0">
+                <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
+                    <h5 class="text-left">Какое максимальное количество людей в группе?</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
+                <div class="col-sm-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
                     <a class="text-right">
-                        <img src="./svg/plus.svg" alt="Image not found">
+                        <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-lg-8 border-top border-dark mx-auto row px-0">
-                <div class="col-lg-10 text-left pb-lg-2 pt-lg-3">
-                    <h6 class="text-left">Что нужно с собой на занятии?</h6>
+            <div class="col-sm-10 border-top border-dark mx-auto row px-0">
+                <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
+                    <h5 class="text-left">Что нужно с собой на занятии?</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
+                <div class="col-sm-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
                     <a class="text-right">
-                        <img src="./svg/plus.svg" alt="Image not found">
+                        <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-lg-8 border-top border-dark mx-auto row px-0">
-                <div class="col-lg-10 text-left pb-lg-2 pt-lg-3">
-                    <h6 class="text-left">Есть ли пробное занятие?</h6>
+            <div class="col-sm-10 border-top border-dark mx-auto row px-0">
+                <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
+                    <h5 class="text-left">Есть ли пробное занятие?</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
+                <div class="col-sm-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
                     <a class="text-right">
-                        <img src="./svg/plus.svg" alt="Image not found">
+                        <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-lg-8 border-top border-bottom border-dark mx-auto row px-0">
-                <div class="col-lg-10 text-left pb-lg-2 pt-lg-3">
-                    <h6 class="text-left">Нужно ли выполнять домашнее занятие?</h6>
+            <div class="col-sm-10 border-top border-bottom border-dark mx-auto row px-0">
+                <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
+                    <h5 class="text-left">Нужно ли выполнять домашнее занятие?</h5>
                 </div>
-                <div class="col-lg-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
+                <div class="col-sm-2 text-left pb-lg-0 pt-lg-0 d-flex flex-column align-content-end justify-content-center">
                     <a class="text-right">
-                        <img src="./svg/plus.svg" alt="Image not found">
+                        <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
             </div>
@@ -865,7 +903,7 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Начни программировать прямо сейчас</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Начни программировать прямо сейчас</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
             <h1 class=" text-center text-danger">Блок пропущен</h1>
@@ -877,7 +915,7 @@
 <div class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
-            <h1 class="font-weight-bold text-uppercase text-center">Контакты</h1>
+            <h1 class="font-weight-bolder text-uppercase text-center">Контакты</h1>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center">
             <h1 class=" text-center text-danger">Блок пропущен</h1>
@@ -886,8 +924,8 @@
 </div>
 
 <!--19 section-->
-<footer class="container-fluid pt-5 pb-2 bg-light">
-    <div class="col-8 mx-auto row">
+<footer class="container-fluid pt-5 pb-4 bg-light">
+    <div class="col-10 mx-auto row">
         <div class="col-12 col-md">
             <img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAAAmCAQAAAD5Txa/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiAwcQKBVhibtxAAABL0lEQVRo3u2b2w3CMAxFr1EngVU6SxmBWWCWrgKjYD54SA0FpZWDudI9+eqHE0tHTp1IMThisegJxZ0OgAXOJ0/N2GQnIGqRKiJitywHHE69D9rW3NzcjplZ+NtQVdFQquofCrcAgGHyJVJRVdEgVTR0xfcYesoSgaiqaEhR9WqH60a/Pqoy5jCb5hC+zoKYTTl6VRUN35v1J+eZE9l0qJ1vjqqKhlxVp6qtfQyI+hoDTP+KrdZZEnMtx1g26/PscElVKpBdVWIBUkVDM1WfTg0BUy847/ychrmpqmiQKhqkioa6Zn0Ffml2R3/yfaus/zk3VRUNUkVDrqp1re2vmvU166Q367pZ/wO0AdIgVTQYPPh5gV6CNEJVRYNU0SBVNEgVDVJFg1TR0EHvd0m4AZlJvmaTAyBqAAAAAElFTkSuQmCC"
                  alt="Image not found">
@@ -932,16 +970,28 @@
         <div class="col-6 col-md text-center">
             <h5 class="text-uppercase mb-4 font-weight-bold">Полезное</h5>
             <ul class="list-unstyled list-inline text-small">
-                <li><a class="text-primary toggle-ref" href="#">Статьи</a></li>
-                <li><a class="text-primary toggle-ref" href="#">Видео</a></li>
+                <li><a class="text-dark" href="#">Статьи</a></li>
+                <li><a class="text-dark" href="#">Видео</a></li>
+                <li><a class="text-dark" href="#">Фото</a></li>
             </ul>
         </div>
         <div class="col-6 col-md text-center">
             <h5 class="text-uppercase mb-4 font-weight-bold">Контакты</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Business</a></li>
-                <li><a class="text-muted" href="#">Education</a></li>
-            </ul>
+            <div class="row">
+                <div class="col-12 d-flex flex-row justify-content-center align-content-center px-0">
+                    <img width="35" height="50" src="./svg/phone.svg" alt="No image found">
+                    <h6 class="small text-center mt-2 ml-2">
+                        <a class="small font-weight-bolder">+3 (8044) 237-37-07<br>+3 (8063) 237-37-07</a>
+                    </h6>
+                </div>
+                <div class="col-10 mx-auto">
+                    <h6 class="small  text-center">
+                        <span class="small text-dark font-weight-bold">
+                            Киев, метро "Почтовая площадь", ул. Братская 6/13 оф. 103
+                        </span>
+                    </h6>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
@@ -960,10 +1010,10 @@
 <script>
     $('.darken-photo')
         .on('mouseenter', function () {
-            $(this).find('h4').removeClass('text-light').addClass('text-success')
+            $(this).find('.animated').removeClass('text-light').addClass('text-success')
         })
         .on('mouseleave', function () {
-            $(this).find('h4').removeClass('text-success').addClass('text-light')
+            $(this).find('.animated').removeClass('text-success').addClass('text-light')
         })
 </script>
 </body>

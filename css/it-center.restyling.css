@@ -1,9 +1,17 @@
+
 /*First block*/
 .background-container {
     background-image: url("./../images/main/background-learning.jpg");
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
+}
 
+@media screen and (max-width: 992px) {
+    .background-container {
+        min-height: 25vh;
+        max-height: max-content;
+    }
 }
 
 
@@ -106,32 +114,6 @@ transition: color 0.1s ease-in-out 0.05s;
         cursor: pointer;
     }
 
-    .darken-photo:hover .darken-background {
-        bottom: calc(100% - 12vw + 7.5px);
-    }
-
-    .darken-photo>.darken-slider {
-        position: absolute;
-        display: block;
-        top: calc(100% - 5vw + 7.5px);
-        max-height: 0;
-        min-height: 0;
-        height: 0;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0.71);
-        width: calc(100% - 30px);
-        transition: all .2s ease-in-out 0.1s;
-        padding: 0 1vw;
-    }
-
-    .darken-photo:hover>.darken-slider {
-        position: absolute;
-        top: 8vw;
-        height: calc(100% - 12vw + 7.5px);
-        max-height: 100%;
-        min-height: calc(100% - 12vw + 7.5px);
-    }
-
     .darken-photo>.darken-image {
         width:100%;
     }
@@ -142,10 +124,10 @@ transition: color 0.1s ease-in-out 0.05s;
         z-index: 2;
         /*width - full minus padding of bootstrap block*/
         width: calc(100% - 30px);
-        padding: 0 5vw;
+        padding: 0 1vw;
         bottom: 0;
-        min-height: 8vw;
-        max-height: 8vw;
+        min-height: 10vh;
+        max-height: 10vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -161,7 +143,12 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 @media screen and (max-width: 1199px) {
-    .darken-photo>div.darken-background>h4 {
+    .darken-photo>div.darken-background {
+        min-height: 12vh;
+        max-height: 12vh;
+    }
+
+    .darken-photo>div.darken-background>h6 {
         font-size: 1rem;
     }
 }
@@ -194,7 +181,7 @@ transition: color 0.1s ease-in-out 0.05s;
         margin-bottom: 3.5vw;
     }
 
-    .darken-photo>div.darken-background>h4 {
+    .darken-photo>div.darken-background>h6 {
         text-transform: uppercase;
         font-size: 1.25rem;
         margin-bottom: 0;
@@ -226,13 +213,38 @@ transition: color 0.1s ease-in-out 0.05s;
     transform: rotateZ(30deg) translateY(-3vw) translateX(2.5vw);
 }
 
+.career-currency.correct-middle {
+    transform: rotateZ(30deg) translateY(-2vw) translateX(2vw);
+}
+
 .career-currency.correct-senior {
-    transform: rotateZ(30deg) translateY(1vw) translateX(-2.5vw);
+    transform: rotateZ(30deg) translateY(0.5vw) translateX(-2vw);
+}
+
+.md-show {
+    display: none;
+}
+.lg-show {
+    display: flex;
+}
+
+@media screen and (max-width: 992px) {
+    .md-show {
+        display: flex;
+    }
+    .lg-show {
+        display: none;
+    }
+
+    .carousel-item--career>img {
+        min-height: 40vw;
+        max-height: 40vw;
+    }
 }
 
 .career-time {
     position: absolute;
-    transform: translateX(8vw) translateY(13vh);
+    transform: translateX(8vw) translateY(15vh);
 }
 
 .career-step>img.step-image {
@@ -284,27 +296,46 @@ transition: color 0.1s ease-in-out 0.05s;
 
 @media screen and (min-width: 1200px) {
     .auditory-description {
-        font-size: larger;
+        font-size: 1rem;
+        padding: 1.5vw 1.5vw;
+        max-height: 12vw;
+        min-height: 12vw;
+    }
+
+    .course-auditory-image {
+        max-height: 35vw;
+        min-height: 35vw;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 1199px) {
     .auditory-description {
-        font-size: large;
+        font-size: 1rem;
+        padding: 1.5vw 1.5vw;
+
+    }
+    .course-auditory-image {
+        max-height: 55vh;
+        min-height: 55vh;
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     .course-auditory-image {
-        max-height: 85vw;
-        min-height: 45vw;
+        max-height: 60vw;
+        min-height: 60vw;
+    }
+
+    .course-auditory-image>img {
+        width: 75%;
     }
 
     .auditory-description {
         position: absolute;
         bottom: 0;
-        max-height: 25vw;
-        min-height: 25vw;
+        max-height: 20vw;
+        min-height: 20vw;
         padding: 3vw 3vw;
         width: calc(100% - 5vw);
         background: rgba(255, 255, 255, 0.5);
@@ -316,6 +347,17 @@ transition: color 0.1s ease-in-out 0.05s;
         align-items: stretch;
         margin: 0;
         font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course-auditory-image {
+        max-height: 80vw;
+        min-height: 80vw;
+    }
+    .auditory-description {
+        max-height: 20vw;
+        min-height: 20vw;
     }
 }
 
@@ -343,8 +385,8 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 .text-format {
-    min-height: 8vh;
-    max-height: 8vh;
+    min-height: 2rem;
+    max-height: 2rem;
 }
 
 .text-format-bottom {
@@ -360,7 +402,7 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 .format-graph {
-    min-height: 8vw;
+    min-height: 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,15 +431,15 @@ transition: color 0.1s ease-in-out 0.05s;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    align-items: center;
+    align-items: start;
 }
 
 .learn-info {
     display: inline-flex;
-    min-width: 4rem;
-    max-width: 4rem;
-    min-height: 4rem;
-    max-height: 4rem;
+    min-width: 3rem;
+    max-width: 3rem;
+    min-height: 3rem;
+    max-height: 3rem;
     font-size: xx-large;
     justify-content: center;
     flex-direction: column;
@@ -443,5 +485,9 @@ transition: color 0.1s ease-in-out 0.05s;
 
 svg {
     z-index: 1;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
