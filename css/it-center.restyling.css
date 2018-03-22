@@ -478,9 +478,22 @@ transition: color 0.1s ease-in-out 0.05s;
     align-items: center;
 }
 
+/*14th section*/
+.block-barrier {
+    position: absolute;
+    right: 0;
+    min-height: 100%;
+    border-left: 1px solid #f8f9fa;
+}
+
 /*15th section*/
 .cursor-pointer {
     cursor: pointer;
+}
+
+/*19 section*/
+.logo.footer-mobile {
+    min-width: 45vw;
 }
 
 svg {
