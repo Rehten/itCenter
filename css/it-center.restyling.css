@@ -252,21 +252,20 @@ transition: color 0.1s ease-in-out 0.05s;
 
 .career-arrow>img {
     transform: translateX(-1vw) translateY(-3vw);
-    width: 80vw;
+    width: 65vw;
 }
 
 .arrow-step>h5 {
     position: absolute;
-    transform: translateX(5vw) translateY(-10vw);
     text-transform: uppercase;
 }
 
 .arrow-step>h5.rotate-previous {
-    transform: translateX(5vw) translateY(-10vw) rotateZ(-10deg);
+    transform: translateX(3.5vw) translateY(-8.75vw) rotateZ(-10deg);
 }
 
 .arrow-step>h5.rotate-next {
-    transform: translateX(5vw) translateY(-10vw) rotateZ(10deg);
+    transform: translateX(3.5vw) translateY(-8.75vw) rotateZ(10deg);
 }
 
 /*Fourth section*/
@@ -400,6 +399,9 @@ transition: color 0.1s ease-in-out 0.05s;
 .filled-background {
     background: rgba(131, 177, 215, 0.7);
 }
+.filled-border {
+    border-color: rgba(131, 177, 215, 0.7);
+}
 
 .format-graph {
     min-height: 6vw;
@@ -482,13 +484,18 @@ transition: color 0.1s ease-in-out 0.05s;
 .block-barrier {
     position: absolute;
     right: 0;
-    min-height: 100%;
-    border-left: 1px solid #f8f9fa;
+    min-height: calc(100% - 1.4rem);
+    top: 0.7rem;
+    border-left: 1px solid rgba(131, 177, 215, 0.7);
 }
 
 /*15th section*/
 .cursor-pointer {
     cursor: pointer;
+}
+
+.cursor-pointer:hover>div>div>h5 {
+    text-decoration: underline;
 }
 
 /*19 section*/
