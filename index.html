@@ -1092,6 +1092,13 @@
                     </a>
                 </div>
             </div>
+            <div class="col-sm-10 mx-auto answer-text">
+                <h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolore dolorum ex
+                    excepturi fugiat
+                    inventore ipsum, labore minus pariatur perferendis provident quam quasi quisquam quos reiciendis
+                    rerum sint. Dolor, dolorem.
+                </h6>
+            </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
             <div class="col-sm-10 border-top border-dark mx-auto row px-0">
@@ -1103,6 +1110,13 @@
                         <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
+            </div>
+            <div class="col-sm-10 mx-auto answer-text">
+                <h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate
+                    eligendi error eveniet
+                    hic, ipsam magnam molestias nam perferendis quibusdam quos, reiciendis rerum, sit tempore vel?
+                    Fugiat harum nisi velit.
+                </h6>
             </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
@@ -1116,6 +1130,14 @@
                     </a>
                 </div>
             </div>
+            <div class="col-sm-10 mx-auto answer-text">
+                <h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, facere
+                    in iste omnis quam
+                    quidem sit. Asperiores deleniti est eveniet fugit illum, laudantium, minima nobis perferendis
+                    quasi
+                    repellat suscipit velit.
+                </h6>
+            </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
             <div class="col-sm-10 border-top border-dark mx-auto row px-0">
@@ -1128,9 +1150,17 @@
                     </a>
                 </div>
             </div>
+            <div class="col-sm-10 mx-auto answer-text">
+                <h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti impedit
+                    nostrum voluptate! Hic
+                    itaque magni omnis provident quasi qui recusandae repellendus. A ad enim facilis incidunt
+                    numquam
+                    rerum suscipit tenetur!
+                </h6>
+            </div>
         </div>
         <div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 row text-center cursor-pointer">
-            <div class="col-sm-10 border-top border-bottom border-dark mx-auto row px-0">
+            <div class="col-sm-10 border-top border-dark mx-auto row px-0">
                 <div class="col-sm-10 text-left pb-sm-3 pt-sm-4">
                     <h5 class="text-left">Нужно ли выполнять домашнее занятие?</h5>
                 </div>
@@ -1139,6 +1169,14 @@
                         <img height="35" src="./svg/plus.svg" alt="Image not found">
                     </a>
                 </div>
+            </div>
+            <div class="col-sm-10 mx-auto answer-text border-bottom border-dark">
+                <h6 class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+                    cupiditate distinctio
+                    excepturi, in ipsum placeat suscipit tempore ut. Adipisci ipsum iure iusto mollitia neque quasi
+                    quia
+                    saepe veniam. Vel.
+                </h6>
             </div>
         </div>
     </div>
@@ -1287,8 +1325,8 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
-<!-- Animate second block on hover to any element -->
 <script>
+    // Animate second block on hover to any element
     $('.darken-photo')
         .on('mouseenter', function () {
             $(this).find('.animated').removeClass('text-light').addClass('text-success')
@@ -1296,6 +1334,18 @@
         .on('mouseleave', function () {
             $(this).find('.animated').removeClass('text-success').addClass('text-light')
         })
+
+    // toggled answer-question panels
+    $('.cursor-pointer').each(function (value) {
+        var elem = $(this)
+        elem.on('click', function (event) {
+            if (elem.hasClass('answered')) {
+                elem.removeClass('answered')
+            } else {
+                elem.addClass('answered')
+            }
+        })
+    })
 </script>
 </body>
 </html>
