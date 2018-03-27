@@ -321,8 +321,8 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 @media screen and (max-width: 992px) {
-    body {
-        font-size: 1.5rem;
+    html {
+        font-size: 125%;
     }
 
     .course-auditory-image {
@@ -341,7 +341,7 @@ transition: color 0.1s ease-in-out 0.05s;
         min-height: 20vw;
         padding: 3vw 3vw;
         width: calc(100% - 5vw);
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.7);
         z-index: 5;
         text-transform: uppercase;
         display: flex;
