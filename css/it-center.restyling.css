@@ -246,8 +246,8 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 .career-arrow>img {
-    transform: translateX(-1vw) translateY(-3vw);
-    width: 65vw;
+    transform: translateX(-1vw) translateY(-2.5vw);
+    width: 70vw;
 }
 
 .arrow-step>h5 {
@@ -304,6 +304,15 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 @media screen and (max-width: 1199px) {
+    .rotate-next, .rotate-previous {
+        font-size: 0.95rem
+    }
+
+    .career-arrow>img {
+        transform: translateX(-1vw) translateY(-2.6vw);
+        width: 70vw;
+    }
+
     .auditory-description {
         font-size: 1rem;
         padding: 1.5vw 1.5vw;
@@ -427,6 +436,22 @@ transition: color 0.1s ease-in-out 0.05s;
     text-decoration: underline;
 }
 
+#ProgramHidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#ProgramHidden.opened {
+    max-height: 500vh;
+}
+
+@media screen and (max-width: 992px) {
+    #ProgramHidden.opened {
+        max-height: 2000vh;
+    }
+}
+
 /*Eight section*/
 .learn-block {
     display: flex;
@@ -502,16 +527,12 @@ transition: color 0.1s ease-in-out 0.05s;
 
 .answer-text {
     overflow: hidden;
-    height: 0;
-    min-height: 0;
     max-height: 0;
-    transition: height 0.2s ease-in-out 0.1s, max-height 0.2s ease-in-out 0.1s, min-height 0.2s ease-in-out 0.1s;
+    transition: max-height 0.2s ease-in-out 0.1s;
 }
 
 .cursor-pointer.answered>div.answer-text {
-    max-height: 100px;
-    min-height: 100px;
-    height: 100px;
+    max-height: 50vh;
 }
 
 .cursor-pointer>div>div>a>img {
