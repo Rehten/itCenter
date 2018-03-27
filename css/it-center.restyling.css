@@ -178,12 +178,11 @@ transition: color 0.1s ease-in-out 0.05s;
 
     .darken-photo>div.darken-background>h6 {
         text-transform: uppercase;
-        font-size: 1.45rem;
+        font-size: 1.3rem;
         margin-bottom: 0;
         line-height: 1.4;
     }
 }
-
 
 .darken-photo>img.darken-image.darken-right {
     z-index: 1;
@@ -280,7 +279,7 @@ transition: color 0.1s ease-in-out 0.05s;
     min-height: 15vw;
     width: calc(100%);
     text-align: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.75);
     z-index: 5;
     text-transform: uppercase;
     display: flex;
@@ -293,8 +292,8 @@ transition: color 0.1s ease-in-out 0.05s;
     .auditory-description {
         font-size: 1rem;
         padding: 1.5vw 1.5vw;
-        max-height: 12vw;
-        min-height: 12vw;
+        max-height: 13vh;
+        min-height: 13vh;
     }
 
     .course-auditory-image {
