@@ -135,11 +135,6 @@ transition: color 0.1s ease-in-out 0.05s;
         transition: bottom 0.2s ease-in-out 0.1s;
     }
 
-    .darken-photo>div.darken-background>h6 {
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        margin-bottom: 0;
-    }
 }
 
 @media screen and (max-width: 1199px) {
