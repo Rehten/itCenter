@@ -321,6 +321,10 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 @media screen and (max-width: 992px) {
+    body {
+        font-size: 1.5rem;
+    }
+
     .course-auditory-image {
         max-height: 60vw;
         min-height: 60vw;
