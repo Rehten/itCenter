@@ -292,8 +292,8 @@ transition: color 0.1s ease-in-out 0.05s;
     .auditory-description {
         font-size: 1rem;
         padding: 1.5vw 1.5vw;
-        max-height: 13vh;
-        min-height: 13vh;
+        max-height: 18vh;
+        min-height: 18vh;
     }
 
     .course-auditory-image {
@@ -455,6 +455,12 @@ transition: color 0.1s ease-in-out 0.05s;
 /*Nineth block*/
 .teachers-photo {
     max-height: 20vw;
+}
+
+@media screen and (max-width: 991px) {
+    .teachers-photo {
+        max-height: 55vw;
+    }
 }
 
 /*11th section*/
