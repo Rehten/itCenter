@@ -135,7 +135,7 @@ transition: color 0.1s ease-in-out 0.05s;
         transition: bottom 0.2s ease-in-out 0.1s;
     }
 
-    .darken-photo>div.darken-background>h4 {
+    .darken-photo>div.darken-background>h6 {
         text-transform: uppercase;
         font-size: 1.25rem;
         margin-bottom: 0;
@@ -183,8 +183,9 @@ transition: color 0.1s ease-in-out 0.05s;
 
     .darken-photo>div.darken-background>h6 {
         text-transform: uppercase;
-        font-size: 1.25rem;
+        font-size: 1.45rem;
         margin-bottom: 0;
+        line-height: 1.4;
     }
 }
 
@@ -340,7 +341,6 @@ transition: color 0.1s ease-in-out 0.05s;
         max-height: 20vw;
         min-height: 20vw;
         padding: 3vw 3vw;
-        width: calc(100% - 5vw);
         background: rgba(255, 255, 255, 0.7);
         z-index: 5;
         text-transform: uppercase;
@@ -350,6 +350,7 @@ transition: color 0.1s ease-in-out 0.05s;
         align-items: stretch;
         margin: 0;
         font-size: x-large;
+        line-height: 1.5;
     }
 }
 
