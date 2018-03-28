@@ -169,7 +169,8 @@ transition: color 0.1s ease-in-out 0.05s;
         width: calc(100% - 30px);
         padding: 1vw 5vw;
         bottom: 0;
-        min-height: 10vw;
+        min-height: 12vw;
+        max-height: 25vw;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -326,7 +327,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
 @media screen and (max-width: 992px) {
     html {
-        font-size: 125%;
+        font-size: 175%;
     }
 
     .course-auditory-image {
@@ -358,10 +359,6 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 @media screen and (max-width: 768px) {
-    html {
-        font-size: 125%;
-    }
-
     .course-auditory-image {
         max-height: 80vw;
         min-height: 80vw;
@@ -425,7 +422,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
 @media screen and (max-width: 992px) {
     .format-graph {
-        min-height: 7vw;
+        min-height: 10vw;
     }
 }
 
