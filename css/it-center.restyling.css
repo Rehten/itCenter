@@ -477,6 +477,12 @@ transition: color 0.1s ease-in-out 0.05s;
     margin-left: 1.25rem;
 }
 
+@media screen and (max-width: 991px) {
+    .learn-details {
+        font-size: 1.25rem;
+    }
+}
+
 /*Nineth block*/
 .teachers-photo {
     max-height: 20vw;
