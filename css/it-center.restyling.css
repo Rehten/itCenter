@@ -280,7 +280,7 @@ transition: color 0.1s ease-in-out 0.05s;
     min-height: 15vw;
     width: calc(100%);
     text-align: center;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 5;
     text-transform: uppercase;
     display: flex;
@@ -352,8 +352,8 @@ transition: color 0.1s ease-in-out 0.05s;
         bottom: 0;
         max-height: 20vw;
         min-height: 20vw;
-        padding: 3vw 3vw;
-        background: rgba(255, 255, 255, 0.7);
+        padding: 12vw 3vw;
+        background: rgba(255, 255, 255, 0.8);
         z-index: 5;
         text-transform: uppercase;
         display: flex;
@@ -410,6 +410,16 @@ transition: color 0.1s ease-in-out 0.05s;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+}
+
+.format-device {
+    height: 101px;
+}
+
+@media screen and (max-width: 992px) {
+    .format-device {
+        height: 6rem;
+    }
 }
 
 /*Sixth section*/
