@@ -613,6 +613,10 @@ transition: color 0.1s ease-in-out 0.05s;
     transition: max-height 0.2s ease-in-out 0.1s;
 }
 
+.answer-plus {
+    height: 2rem;
+}
+
 .cursor-pointer.answered>div.answer-text {
     max-height: 50vh;
 }
