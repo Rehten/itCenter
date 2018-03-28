@@ -475,7 +475,7 @@
             </div>
             <div id="ProgramHidden" class="row">
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 1
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -501,7 +501,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 2
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -527,7 +527,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 3
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -553,7 +553,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 1
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -579,7 +579,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 2
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -605,7 +605,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-5 pb-3">
-                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-3 mx-lg-0 mx-md-auto">
+                    <div class="p-3 text-uppercase border border-dark text-center col-lg-8 col-md-4 mx-lg-0 mx-md-auto">
                         Занятие 3
                     </div>
                     <h5 class="font-weight-bolder mt-5 text-md-center text-lg-left h5-increase">1. Инструментарий
@@ -1570,7 +1570,7 @@
         var master2Info = $('#Master2Info')
         var master3Info = $('#Master3Info')
 
-        // encapsulate data
+        // encapsulate masters data in model
         var mastersList = [
             {
                 masterRef: master1Ref,
@@ -1624,17 +1624,21 @@
 
         // show/hidden info about teachers
         for (var i = 0; i < mastersList.length; i++) {
+            // wrapper for emulate 'let' variable in old browser
             (function (i) {
                 var masterBlock = mastersList[i]
                 var otherMasters = mastersList
                     .filter(function (value) {
                         return value !== masterBlock
                     })
+
+                // add event listeners to every reference
                 masterBlock.masterRef.click(function () {
-                    console.log(masterBlock.masterRef)
+                    // show info about clicked master
                     masterBlock.masterArrow.removeClass('hidden')
                     masterBlock.masterInfo.removeClass('hidden')
 
+                    // hide thers masters
                     otherMasters.forEach(function (value) {
                         value.masterArrow.addClass('hidden')
                         value.masterInfo.addClass('hidden')
