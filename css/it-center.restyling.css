@@ -431,7 +431,7 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 .format-graph {
-    min-height: 4vw;
+    min-height: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -444,9 +444,9 @@ transition: color 0.1s ease-in-out 0.05s;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
     .format-graph {
-        min-height: 10vw;
+        min-height: 6vw;
     }
 }
 
