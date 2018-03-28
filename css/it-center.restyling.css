@@ -522,8 +522,52 @@ transition: color 0.1s ease-in-out 0.05s;
 
 @media screen and (max-width: 991px) {
     .teachers-photo {
-        max-height: 55vw;
+        max-height: 35vw;
     }
+}
+
+.teacher-info {
+    transition: opacity 0.5s ease-in-out 0.1s;
+}
+
+.teacher-info.hidden {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.arrow-up {
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0.1s;
+}
+
+.arrow-up.hidden {
+    opacity: 0;
+}
+
+.arrow-up:after, .arrow-up:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow-up:after {
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: #000000;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.arrow-up:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-bottom-color: #000000;
+    border-width: 16px;
+    margin-left: -16px;
 }
 
 /*11th section*/
