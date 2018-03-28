@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 992px) {
     .background-container {
-        min-height: 25vh;
+        min-height: 100vh;
         max-height: max-content;
     }
 }
