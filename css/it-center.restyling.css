@@ -1,4 +1,6 @@
-
+.container-fluid {
+    width: 100% !important;
+}
 /*First block*/
 .background-container {
     background-image: url("./../images/main/background-learning.jpg");
