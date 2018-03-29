@@ -1596,100 +1596,100 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 
-<!--<script>-->
-    <!--$(document).ready(function () {-->
-        <!--// clickable references-->
-        <!--var master1Ref = $('#Master1Ref')-->
-        <!--var master2Ref = $('#Master2Ref')-->
-        <!--var master3Ref = $('#Master3Ref')-->
+<script>
+    $(document).ready(function () {
+        // clickable references
+        var master1Ref = $('#Master1Ref')
+        var master2Ref = $('#Master2Ref')
+        var master3Ref = $('#Master3Ref')
 
-        <!--// master info arrows-->
-        <!--var master1 = $('#Master1')-->
-        <!--var master2 = $('#Master2')-->
-        <!--var master3 = $('#Master3')-->
+        // master info arrows
+        var master1 = $('#Master1')
+        var master2 = $('#Master2')
+        var master3 = $('#Master3')
 
-        <!--// master info blocks-->
-        <!--var master1Info = $('#Master1Info')-->
-        <!--var master2Info = $('#Master2Info')-->
-        <!--var master3Info = $('#Master3Info')-->
+        // master info blocks
+        var master1Info = $('#Master1Info')
+        var master2Info = $('#Master2Info')
+        var master3Info = $('#Master3Info')
 
-        <!--// encapsulate masters data in model-->
-        <!--var mastersList = [-->
-            <!--{-->
-                <!--masterRef: master1Ref,-->
-                <!--masterArrow: master1,-->
-                <!--masterInfo: master1Info-->
-            <!--},-->
-            <!--{-->
-                <!--masterRef: master2Ref,-->
-                <!--masterArrow: master2,-->
-                <!--masterInfo: master2Info-->
-            <!--},-->
-            <!--{-->
-                <!--masterRef: master3Ref,-->
-                <!--masterArrow: master3,-->
-                <!--masterInfo: master3Info-->
-            <!--}-->
-        <!--]-->
+        // encapsulate masters data in model
+        var mastersList = [
+            {
+                masterRef: master1Ref,
+                masterArrow: master1,
+                masterInfo: master1Info
+            },
+            {
+                masterRef: master2Ref,
+                masterArrow: master2,
+                masterInfo: master2Info
+            },
+            {
+                masterRef: master3Ref,
+                masterArrow: master3,
+                masterInfo: master3Info
+            }
+        ]
 
-        <!--// Animate second block on hover to any element-->
-        <!--$('.darken-photo')-->
-            <!--.on('mouseenter', function () {-->
-                <!--$(this).find('.animated').removeClass('text-light').addClass('text-success')-->
-            <!--})-->
-            <!--.on('mouseleave', function () {-->
-                <!--$(this).find('.animated').removeClass('text-success').addClass('text-light')-->
-            <!--})-->
+        // Animate second block on hover to any element
+        $('.darken-photo')
+            .on('mouseenter', function () {
+                $(this).find('.animated').removeClass('text-light').addClass('text-success')
+            })
+            .on('mouseleave', function () {
+                $(this).find('.animated').removeClass('text-success').addClass('text-light')
+            })
 
-        <!--// toggled answer-question panels-->
-        <!--$('.cursor-pointer').each(function () {-->
-            <!--var elem = $(this)-->
-            <!--elem.on('click', function () {-->
-                <!--if (elem.hasClass('answered')) {-->
-                    <!--elem.removeClass('answered')-->
-                <!--} else {-->
-                    <!--elem.addClass('answered')-->
-                <!--}-->
-            <!--})-->
-        <!--})-->
+        // toggled answer-question panels
+        $('.cursor-pointer').each(function () {
+            var elem = $(this)
+            elem.on('click', function () {
+                if (elem.hasClass('answered')) {
+                    elem.removeClass('answered')
+                } else {
+                    elem.addClass('answered')
+                }
+            })
+        })
 
-        <!--$('.open-program').click(function () {-->
-            <!--var elem = $('#ProgramHidden')-->
-            <!--var message = $('#ProgramMessage')-->
-            <!--if (elem.hasClass('opened')) {-->
-                <!--elem.removeClass('opened')-->
-                <!--message.text('Смотреть полностью программу курса')-->
-            <!--} else {-->
-                <!--elem.addClass('opened')-->
-                <!--message.text('Скрыть программу курса')-->
-            <!--}-->
-        <!--})-->
+        $('.open-program').click(function () {
+            var elem = $('#ProgramHidden')
+            var message = $('#ProgramMessage')
+            if (elem.hasClass('opened')) {
+                elem.removeClass('opened')
+                message.text('Смотреть полностью программу курса')
+            } else {
+                elem.addClass('opened')
+                message.text('Скрыть программу курса')
+            }
+        })
 
-        <!--// show/hidden block info about teachers-->
-        <!--for (var i = 0; i < mastersList.length; i++) {-->
-            <!--// wrapper for emulate 'let' variable in old browser-->
-            <!--(function (i) {-->
-                <!--var masterBlock = mastersList[i]-->
-                <!--var otherMasters = mastersList-->
-                    <!--.filter(function (value) {-->
-                        <!--return value !== masterBlock-->
-                    <!--})-->
+        // show/hidden block info about teachers
+        for (var i = 0; i < mastersList.length; i++) {
+            // wrapper for emulate 'let' variable in old browser
+            (function (i) {
+                var masterBlock = mastersList[i]
+                var otherMasters = mastersList
+                    .filter(function (value) {
+                        return value !== masterBlock
+                    })
 
-                <!--// add event listeners to every reference-->
-                <!--masterBlock.masterRef.click(function () {-->
-                    <!--// show info about clicked master-->
-                    <!--masterBlock.masterArrow.removeClass('hidden-block')-->
-                    <!--masterBlock.masterInfo.removeClass('hidden-block')-->
+                // add event listeners to every reference
+                masterBlock.masterRef.click(function () {
+                    // show info about clicked master
+                    masterBlock.masterArrow.removeClass('hidden-block')
+                    masterBlock.masterInfo.removeClass('hidden-block')
 
-                    <!--// hide thers masters-->
-                    <!--otherMasters.forEach(function (value) {-->
-                        <!--value.masterArrow.addClass('hidden-block')-->
-                        <!--value.masterInfo.addClass('hidden-block')-->
-                    <!--})-->
-                <!--})-->
-            <!--})(i)-->
-        <!--}-->
-    <!--})-->
-<!--</script>-->
+                    // hide thers masters
+                    otherMasters.forEach(function (value) {
+                        value.masterArrow.addClass('hidden-block')
+                        value.masterInfo.addClass('hidden-block')
+                    })
+                })
+            })(i)
+        }
+    })
+</script>
 </body>
 </html>
