@@ -1,3 +1,8 @@
+
+body {
+    min-width: 100% !important;
+}
+
 .container-fluid {
     width: 100% !important;
 }
