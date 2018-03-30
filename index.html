@@ -1742,11 +1742,9 @@ text-center text-uppercase font-weight-bolder">
             var userScrollingPosition = $(this).scrollTop()
             var firstBlockHeight = $('#Main').height()
             if (userScrollingPosition > firstBlockHeight) {
-                console.log('show')
-                $('#StickHeader').removeClass('hidden')
+                $('#StickHeader').addClass('showed')
             } else {
-                console.log('hide')
-                $('#StickHeader').addClass('hidden')
+                $('#StickHeader').removeClass('showed')
             }
         })
     })

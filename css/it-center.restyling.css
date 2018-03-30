@@ -1,13 +1,14 @@
 /*First block*/
 .stick-header {
     z-index: 9999;
-    opacity: 1;
+    transform: translateY(-10vh);
+    opacity: 0;
     transition: transform 0.25s ease-in-out 0.1s, opacity 0.25s ease-in-out 0.1s;
 }
 
-.stick-header.hidden {
-    transform: translateY(-10vh);
-    opacity: 0;
+.stick-header.showed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .background-container {
