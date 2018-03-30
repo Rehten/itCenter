@@ -1,4 +1,10 @@
 /*First block*/
+.box-shadow {
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(94,94,94,1);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(94,94,94,1);
+    box-shadow: 0px 1px 8px 0px rgba(94,94,94,1);
+}
+
 .stick-header {
     z-index: 9999;
     transform: translateY(-10vh);
