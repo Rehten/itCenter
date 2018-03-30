@@ -536,6 +536,7 @@ transition: color 0.1s ease-in-out 0.05s;
     position: absolute;
     pointer-events: none;
     opacity: 0;
+    top: 0;
 }
 
 .arrow-up {
