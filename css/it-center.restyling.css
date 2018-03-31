@@ -37,6 +37,16 @@ object, svg {
     cursor: pointer;
 }
 
+@media screen and (min-width: 992px) {
+    .h1-lg-increase {
+        font-size: 4rem;
+    }
+
+    .h5-lg-increase {
+        font-size: 1.5rem;
+    }
+}
+
 /*Second block*/
 /*.darken-container{*/
     /*margin: 0 auto;*/
@@ -130,10 +140,6 @@ transition: color 0.1s ease-in-out 0.05s;
 @media screen and (min-width: 992px) {
     .darken-container {
         margin-bottom: 3.5vw;
-    }
-
-    .darken-photo {
-        cursor: pointer;
     }
 
     .darken-photo>.darken-image {
@@ -663,6 +669,7 @@ transition: color 0.1s ease-in-out 0.05s;
 /*19 section*/
 .logo.footer-mobile {
     min-width: 45vw;
+    max-width: 45vw;
 }
 
 svg {
