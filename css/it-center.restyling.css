@@ -601,6 +601,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
 /*11th section*/
 .recomendation-image {
+    width: 100%;
     max-width: 100%;
 }
 
