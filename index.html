@@ -127,7 +127,8 @@
         <div class="col-xl-8 col-lg-10 mt-lg-2 mt-md-5 mb-4 pt-2 offset-lg-1 col-md-12 col-sm-12 mx-auto ">
             <h1 class="font-weight-bold text-uppercase text-center h1-lg-increase">Курс основы программирования на языке
                 Java</h1>
-            <h5 class="font-weight-bolder mt-5 text-uppercase h5-lg-increase">Курс рассчитан на людей с нулевым уровнем знаний</h5>
+            <h5 class="font-weight-bolder mt-5 text-uppercase h5-lg-increase">Курс рассчитан на людей с нулевым уровнем
+                знаний</h5>
         </div>
         <div class="col-md-8 p-3 p-md-4 my-md-3 offset-md-2 mx-auto mt-lg-0 mt-md-2">
             <p class="lead font-weight-normal">Старт: 15.01.2018 <span> | </span> СБ. ВС. с 11:00 - 14:00</p>
@@ -206,7 +207,7 @@
 <div class="container-fluid">
     <!-- Third block -->
     <div class="position-relative overflow-hidden-block p-3 p-md-5 m-md-3 text-center">
-        <div class="col-md-12 mt-3 mb-5 pb-5 mx-auto">
+        <div class="col-md-12 mt-3 mb-5 pb-lg-5 pb-md-0 mx-auto">
             <h1 class="font-weight-bold text-uppercase">Развитие твоей карьеры в Java</h1>
         </div>
         <div class="lg-show col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 career-way mt-5 pt-5 row">
@@ -270,16 +271,47 @@
             <div class='carousel'>
                 <ul class='pane-container'>
                     <li class='pane'>
-                        <div class='vertical-center'>1</div>
+                        <div class='vertical-center'>
+                            <div class="carousel-content d-flex flex-row align-items-end justify-content-center">
+                                <img class="first-img" src="./images/career/b3foto1.png" alt="">
+                                <div class="position-absolute carousel-comment">
+                                    <h6 class="text-uppercase text-dark">Сейчас</h6>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class='pane'>
-                        <div class='vertical-center'>2</div>
+                        <div class='vertical-center'>
+                            <div class="carousel-content d-flex flex-row align-items-end justify-content-center">
+                                <img class="second-img" src="./images/career/b3foto2.png" alt="">
+                                <div class="position-absolute carousel-comment">
+                                    <h6 class="text-uppercase text-dark">Спустя<br> 8 месяцев</h6>
+                                    <h5 class="text-muted">400-800$</h5>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class='pane'>
-                        <div class='vertical-center'>3</div>
+                        <div class='vertical-center'>
+                            <div class="carousel-content d-flex flex-row align-items-end justify-content-center">
+                                <img class="third-img" src="./images/career/b3foto3.png" alt="">
+                                <div class="position-absolute carousel-comment">
+                                    <h6 class="text-uppercase text-dark">Спустя<br> 1-2 года</h6>
+                                    <h5 class="text-muted">1300-2300$</h5>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class='pane'>
-                        <div class='vertical-center'>4</div>
+                        <div class='vertical-center'>
+                            <div class="carousel-content d-flex flex-row align-items-end justify-content-center">
+                                <img src="./images/career/b3foto4.png" alt="">
+                                <div class="position-absolute carousel-comment">
+                                    <h6 class="text-uppercase text-dark">Спустя<br> 2-4 года</h6>
+                                    <h5 class="text-muted">2700-4000$</h5>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -1229,7 +1261,7 @@
                     </div>
                     <div class="col-sm-2 col-2 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-center align-items-center">
                         <a class="px-1 btn btn-outline-light border border-dark rounded-0 text-uppercase">
-                                Записаться
+                            Записаться
                         </a>
                     </div>
                 </div>
@@ -1752,7 +1784,7 @@ text-center text-uppercase font-weight-bolder">
             })(i)
         }
 
-    //    toggle header on scroll
+        //    toggle header on scroll
         $(window).scroll(function (ev) {
             var userScrollingPosition = $(this).scrollTop()
             var firstBlockHeight = $('#Main').height()
@@ -1763,50 +1795,50 @@ text-center text-uppercase font-weight-bolder">
             }
         })
 
-    //    carousel for mobile
+        //    carousel for mobile
         console.clear && console.clear()
 
-        var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+        var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'
 
         function Carousel(selector) {
-            var self = this;
-            var $carousel = $(selector);
-            var $container = $('.pane-container', selector);
-            var $panes = $('.pane', selector);
+            var self = this
+            var $carousel = $(selector)
+            var $container = $('.pane-container', selector)
+            var $panes = $('.pane', selector)
 
-            var paneWidth = 0;
-            var paneCount = $panes.length;
-            var panBoundary = .25; // if the pane is paned .25, switch to the next pane.
+            var paneWidth = 0
+            var paneCount = $panes.length
+            var panBoundary = .25 // if the pane is paned .25, switch to the next pane.
 
-            var currentPane = 0;
+            var currentPane = 0
 
             function setPaneSize() {
                 paneWidth = $carousel.width();
-                $panes.each(function(i) {
-                    $(this).width(paneWidth);
-                });
-                $container.width(paneWidth * paneCount);
+                $panes.each(function (i) {
+                    $(this).width(paneWidth)
+                })
+                $container.width(paneWidth * paneCount)
             }
 
-            self.init = function() {
+            self.init = function () {
                 setPaneSize();
-                $(window).on('load resize orientationchange', function() {
-                    setPaneSize();
-                    self.showPane(currentPane);
+                $(window).on('load resize orientationchange', function () {
+                    setPaneSize()
+                    self.showPane(currentPane)
                 })
             }
 
-            self.showPane = function(index) {
-                currentPane = Math.max(0, Math.min(index, paneCount - 1));
-                setContainerOffsetX(-currentPane * paneWidth, true);
+            self.showPane = function (index) {
+                currentPane = Math.max(0, Math.min(index, paneCount - 1))
+                setContainerOffsetX(-currentPane * paneWidth, true)
             }
 
             function setContainerOffsetX(offsetX, doTransition) {
                 if (doTransition) {
                     $container
                         .addClass('transition')
-                        .one(transitionEnd, function() {
-                            $container.removeClass('transition');
+                        .one(transitionEnd, function () {
+                            $container.removeClass('transition')
                         })
                 }
                 $container.css({
@@ -1814,44 +1846,44 @@ text-center text-uppercase font-weight-bolder">
                 });
             }
 
-            self.next = function() {
-                self.showPane(++currentPane);
+            self.next = function () {
+                self.showPane(++currentPane)
             }
-            self.prev = function() {
-                self.showPane(--currentPane);
+            self.prev = function () {
+                self.showPane(--currentPane)
             }
 
             function handleHammer(e) {
                 switch (e.type) {
                     case 'swipeleft':
                     case 'swiperight':
-                        handleSwipe(e);
-                        break;
+                        handleSwipe(e)
+                        break
                     case 'panleft':
                     case 'panright':
                     case 'panend':
                     case 'pancancel':
-                        handlePan(e);
-                        break;
+                        handlePan(e)
+                        break
                 }
             }
 
             function handleSwipe(e) {
                 switch (e.direction) {
                     case Hammer.DIRECTION_LEFT:
-                        self.next();
-                        break;
+                        self.next()
+                        break
                     case Hammer.DIRECTION_RIGHT:
-                        self.prev();
-                        break;
+                        self.prev()
+                        break
                 }
-                hammer.stop(true);
+                hammer.stop(true)
             }
 
             function outOfBound() {
-                var left = $container.position().left;
+                var left = $container.position().left
                 return (currentPane == 0 && left >= 0) ||
-                    (currentPane == paneCount - 1 && left <= -paneWidth * (paneCount - 1));
+                    (currentPane == paneCount - 1 && left <= -paneWidth * (paneCount - 1))
             }
 
             function handlePan(e) {
@@ -1860,32 +1892,31 @@ text-center text-uppercase font-weight-bolder">
                     case 'panright':
                         // Slow down at the first and last pane.
                         if (outOfBound()) {
-                            e.deltaX *= .2;
+                            e.deltaX *= .2
                         }
-                        setContainerOffsetX(-currentPane * paneWidth + e.deltaX);
-                        console.log(-currentPane * paneWidth + e.deltaX);
-                        break;
+                        setContainerOffsetX(-currentPane * paneWidth + e.deltaX)
+                        break
                     case 'panend':
                     case 'pancancel':
                         if (Math.abs(e.deltaX) > paneWidth * panBoundary) {
                             if (e.deltaX > 0) {
-                                self.prev();
+                                self.prev()
                             } else {
-                                self.next();
+                                self.next()
                             }
                         } else {
-                            self.showPane(currentPane);
+                            self.showPane(currentPane)
                         }
-                        break;
+                        break
                 }
             }
 
-            var hammer = new Hammer($carousel[0]).on('swipeleft swiperight panleft panright panend pancancel', handleHammer);
+            var hammer = new Hammer($carousel[0]).on('swipeleft swiperight panleft panright panend pancancel', handleHammer)
         }
 
-        var c = new Carousel('.carousel');
-        c.init();
-        c.showPane(0);
+        var c = new Carousel('.carousel')
+        c.init()
+        c.showPane(0)
     })
 </script>
 </body>

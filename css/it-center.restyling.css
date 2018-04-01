@@ -295,7 +295,6 @@ transition: color 0.1s ease-in-out 0.05s;
 .carousel {
     height: 100%;
     width: 100%;
-    background-color: #000;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -305,11 +304,17 @@ transition: color 0.1s ease-in-out 0.05s;
     margin: auto;
 }
 
+@media screen and (max-width: 992px) {
+    .carousel {
+        height: 20rem;
+        position: relative;
+    }
+}
+
 .pane-container {
     height: 100%;
     width: 100%;
     list-style: none;
-    background-color: #ddd;
     margin: 0;
     padding: 0;
     position: relative;
@@ -327,31 +332,47 @@ transition: color 0.1s ease-in-out 0.05s;
 
 .pane div {
     text-align: center;
-    font-size: 3em;
-    color: #fff;
 }
 
 .vertical-center {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    height: 100%;
 }
 
-.carousel li.pane:nth-child(1) {
-    background: #42d692;
+.carousel-content {
+    min-height: 100%;
 }
 
-.carousel li.pane:nth-child(2) {
-    background: #4986e7;
+.carousel-content>img {
+    height: 20rem;
 }
 
-.carousel li.pane:nth-child(3) {
-    background: #d06b64;
+
+.carousel-comment {
+    transform: translateY(-6rem) translateX(4rem) rotateZ(-15deg);
 }
 
-.carousel li.pane:nth-child(4) {
-    background: #42d692;
+.carousel-comment.inverted {
+    transform: translateY(-6rem) translateX(4rem) rotateZ(15deg);
 }
+
+/* workaround for first image with lower height */
+.carousel-content>img.first-img {
+    padding-top: 14vw;
+}
+
+/* workaround for second image with too large width */
+.carousel-content>img.second-img {
+    transform: translateX(-4.5rem);
+}
+
+/* workaround for third image with too large width */
+.carousel-content>img.third-img {
+    transform: translateX(-3.5rem);
+}
+
 
 /*Fourth section*/
 .course-auditory-image {
