@@ -306,7 +306,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
 @media screen and (max-width: 992px) {
     .carousel {
-        height: 20rem;
+        height: 30rem;
         position: relative;
     }
 }
@@ -346,16 +346,16 @@ transition: color 0.1s ease-in-out 0.05s;
 }
 
 .carousel-content>img {
-    height: 20rem;
+    height: 30rem;
 }
 
 
 .carousel-comment {
-    transform: translateY(-6rem) translateX(4rem) rotateZ(-15deg);
+    transform: translateY(-10rem) translateX(6rem) rotateZ(-15deg);
 }
 
 .carousel-comment.inverted {
-    transform: translateY(-6rem) translateX(4rem) rotateZ(15deg);
+    transform: translateY(-10rem) translateX(6rem) rotateZ(15deg);
 }
 
 /* workaround for first image with lower height */
@@ -365,12 +365,17 @@ transition: color 0.1s ease-in-out 0.05s;
 
 /* workaround for second image with too large width */
 .carousel-content>img.second-img {
-    transform: translateX(-4.5rem);
+    transform: translateX(-5.5rem);
 }
 
 /* workaround for third image with too large width */
 .carousel-content>img.third-img {
     transform: translateX(-3.5rem);
+}
+
+/* workaround for fourth image with too large width */
+.carousel-content>img.fourth-img {
+    transform: translateX(-1rem);
 }
 
 
