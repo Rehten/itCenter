@@ -1824,7 +1824,7 @@ text-center text-uppercase font-weight-bolder">
 
             var paneWidth = 0
             var paneCount = $panes.length
-            var panBoundary = .25 // if the pane is paned .25, switch to the next pane.
+            var panBoundary = 1 // if the pane is paned 1, switch to the next pane.
 
             var currentPane = 0
 
@@ -1897,7 +1897,6 @@ text-center text-uppercase font-weight-bolder">
                         self.prev()
                         break
                 }
-                hammer.stop(true)
             }
 
             function outOfBound() {
