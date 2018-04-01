@@ -358,6 +358,25 @@ transition: color 0.1s ease-in-out 0.05s;
     transform: translateY(-10rem) translateX(6rem) rotateZ(15deg);
 }
 
+.helper {
+    min-height: 2rem;
+    max-height: 2rem;
+    width: 2rem;
+}
+
+.helper-marker {
+    min-height: 1rem;
+    max-height: 1rem;
+    width: 1rem;
+    transform: translateY(1px) translateX(-1px);
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.25s;
+}
+
+.helper-marker.showed {
+    opacity: 1;
+}
+
 /* workaround for first image with lower height */
 .carousel-content>img.first-img {
     padding-top: 14vw;

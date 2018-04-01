@@ -315,6 +315,22 @@
                     </li>
                 </ul>
             </div>
+            <div class="carousel-helper mx-auto mt-4">
+                <div class="helper-row">
+                    <div id="CarouselPointer1" class="helper mr-1 d-inline-flex flex-column justify-content-end align-items-start border border-dark">
+                        <div class="helper-marker bg-dark border border-dark m-0"></div>
+                    </div>
+                    <div id="CarouselPointer2" class="helper mr-1 d-inline-flex flex-column justify-content-end align-items-start border border-dark">
+                        <div class="helper-marker bg-dark border border-dark m-0"></div>
+                    </div>
+                    <div id="CarouselPointer3" class="helper mr-1 d-inline-flex flex-column justify-content-end align-items-start border border-dark">
+                        <div class="helper-marker bg-dark border border-dark m-0"></div>
+                    </div>
+                    <div id="CarouselPointer4" class="helper mr-1 d-inline-flex flex-column justify-content-end align-items-start border border-dark">
+                        <div class="helper-marker bg-dark border border-dark m-0"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -1800,7 +1816,7 @@ text-center text-uppercase font-weight-bolder">
 
         var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'
 
-        function Carousel(selector) {
+        function Carousel(selector, callback) {
             var self = this
             var $carousel = $(selector)
             var $container = $('.pane-container', selector)
@@ -1811,6 +1827,8 @@ text-center text-uppercase font-weight-bolder">
             var panBoundary = .25 // if the pane is paned .25, switch to the next pane.
 
             var currentPane = 0
+
+            callback(currentPane)
 
             function setPaneSize() {
                 paneWidth = $carousel.width();
@@ -1848,9 +1866,11 @@ text-center text-uppercase font-weight-bolder">
 
             self.next = function () {
                 self.showPane(++currentPane)
+                callback(currentPane)
             }
             self.prev = function () {
                 self.showPane(--currentPane)
+                callback(currentPane)
             }
 
             function handleHammer(e) {
@@ -1911,10 +1931,35 @@ text-center text-uppercase font-weight-bolder">
                 }
             }
 
-            var hammer = new Hammer($carousel[0]).on('swipeleft swiperight panleft panright panend pancancel', handleHammer)
+            var hammer = new Hammer($carousel[0]).on(
+                'swipeleft swiperight panleft panright panend pancancel',
+                handleHammer
+            )
         }
 
-        var c = new Carousel('.carousel')
+        // synchronize markers colors with carousel items in Carousel callback
+        var markers = [
+            $('#CarouselPointer1'),
+            $('#CarouselPointer2'),
+            $('#CarouselPointer3'),
+            $('#CarouselPointer4')
+        ]
+
+        var c = new Carousel('.carousel', function (number) {
+            // compare numbers of carousel items and marker - if true - marker showed, others markers hides
+            for (var i = 0; i < markers.length; i++) {
+                (function (i) {
+                    if (i !== number) {
+                        markers[i].find('.helper-marker').removeClass('showed')
+                    } else {
+                        console.log(markers[i])
+                        markers[i].find('.helper-marker').addClass('showed')
+                    }
+                })(i)
+            }
+
+
+        })
         c.init()
         c.showPane(0)
     })
