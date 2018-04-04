@@ -1798,13 +1798,15 @@ text-center text-uppercase font-weight-bolder">
         }
 
         //    toggle header on scroll
+        var stickHeader = $('#StickHeader')
+
         $(window).scroll(function (ev) {
             var userScrollingPosition = $(this).scrollTop()
             var firstBlockHeight = $('#Main').height()
             if (userScrollingPosition > firstBlockHeight) {
-                $('#StickHeader').addClass('showed')
+                stickHeader.addClass('showed')
             } else {
-                $('#StickHeader').removeClass('showed')
+                stickHeader.removeClass('showed')
             }
         })
 
