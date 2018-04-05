@@ -144,6 +144,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
     .darken-photo>.darken-image {
         width:100%;
+        bottom: 0;
     }
 
     .darken-photo>div.darken-background {
