@@ -129,6 +129,8 @@ object, svg {
 
 /*}*/
 
+@media screen and (min-width: 2000px) {body {font-size: 4.5rem !important;}}
+
 div.darken-photo>.darken-background>h4 {
 transition: color 0.1s ease-in-out 0.05s;
 }
@@ -269,7 +271,7 @@ transition: color 0.1s ease-in-out 0.05s;
 
 .career-time {
     position: absolute;
-    transform: translateX(8vw) translateY(15vh);
+    transform: translateX(8vw) translateY(7rem);
 }
 
 .career-step>img.step-image {
