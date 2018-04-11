@@ -732,6 +732,10 @@ transition: color 0.1s ease-in-out 0.05s;
     align-items: center;
 }
 
+.freeze-time {
+    margin-left: 2.2rem;
+}
+
 /*14th section*/
 .block-barrier {
     position: absolute;
