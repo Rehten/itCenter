@@ -26,6 +26,10 @@
     min-height: 100vh;
 }
 
+.start-info {
+    flex-grow: 100;
+}
+
 @media screen and (max-width: 992px) {
     .background-container {
         min-height: 100vh;
