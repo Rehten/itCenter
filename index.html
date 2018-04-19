@@ -152,8 +152,16 @@
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-dark text-center" href="#Prices">ЦЕНЫ</a>
                         </li>
-                        <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center" href="#Courses">КУРСЫ</a>
+                        <li class="nav-item dropdown d-flex flex-column justify-content-center">
+                            <a class="nav-link dropdown-toggle text-dark text-center" href="#"
+                               id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                КУРСЫ
+                            </a>
+                            <div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item text-dark" href="#">Основы Java</a>
+                                <a class="dropdown-item text-dark" href="#">Java ООП</a>
+                                <a class="dropdown-item text-dark" href="#">Java Developer</a>
+                            </div>
                         </li>
                         <li class="lg-show nav-item text-dark d-flex flex-column justify-content-center">
                             <a class="nav-link active text-center" href="#">
@@ -277,8 +285,16 @@
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-light text-center font-weight" href="#Prices">ЦЕНЫ</a>
                         </li>
-                        <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight" href="#Courses">КУРСЫ</a>
+                        <li class="nav-item dropdown d-flex flex-column justify-content-center">
+                            <a class="nav-link dropdown-toggle text-light text-center" href="#" id="coursesMainDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                КУРСЫ
+                            </a>
+                            <div class="dropdown-menu rounded-0 filled-background border border-light" aria-labelledby="coursesMainDropdown">
+                                <a class="dropdown-item text-light" href="#">Основы Java</a>
+                                <a class="dropdown-item text-light" href="#">Java ООП</a>
+                                <a class="dropdown-item text-light" href="#">Java Developer</a>
+                            </div>
                         </li>
                         <li class="lg-show nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link active text-center font-weight" href="#">
@@ -929,7 +945,7 @@
                 <div class="col-lg-12">
                     <img class="teachers-photo" src="./images/teachers/teacher3.png" alt="">
                 </div>
-                <h5 class="text-uppercase mt-3 font-weight-bolder">Виталий</h5>
+                <h5 class="text-uppercase mt-3 font-weight-bolder">Виталий Козак</h5>
                 <p id="Master3Ref" class="text-uppercase text-primary toggle-ref small font-weight-bolder"><span
                         class="small">Смотреть о преподавателе</span>
                 </p>
@@ -2179,6 +2195,11 @@ text-center text-uppercase font-weight-bolder">
         })
         c.init()
         c.showPane(0)
+
+    //    activate dropdowns
+        $('.dropdown>a.nav-link').each(function () {
+            $(this).click();
+        })
     })
 </script>
 </body>
