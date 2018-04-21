@@ -444,8 +444,8 @@ transition: color 0.1s ease-in-out 0.05s;
     }
 
     .course-auditory-image {
-        max-height: 35vw;
-        min-height: 35vw;
+        max-height: 45vw;
+        min-height: 45vw;
         overflow: hidden;
     }
 }
@@ -466,8 +466,8 @@ transition: color 0.1s ease-in-out 0.05s;
 
     }
     .course-auditory-image {
-        max-height: 55vh;
-        min-height: 55vh;
+        max-height: 65vh;
+        min-height: 65vh;
     }
 }
 
