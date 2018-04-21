@@ -485,8 +485,8 @@ transition: color 0.1s ease-in-out 0.05s;
     }
 
     .course-auditory-image {
-        max-height: 60vw;
-        min-height: 60vw;
+        max-height: 80vh;
+        min-height: 80vh;
     }
 
     .course-auditory-image>img {
