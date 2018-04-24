@@ -820,6 +820,10 @@ div.darken-photo > .darken-background > h4 {
 }
 
 /*17th section*/
+.guide-background {
+    background: rgba(38, 38, 41, 0.95);
+}
+
 .it-center.it-map {
     width: 100%;
 }
