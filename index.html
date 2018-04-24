@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <title>Курсы по программированию</title>
 
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./wp-content/themes/twentyseventeen/images/favicon.ico">
 
 
     <link rel="stylesheet" href="./wp-content/themes/twentyseventeen/css/bootstrap-reboot.min.css">
@@ -150,16 +150,16 @@
                     </ul>
                     <ul class="navbar-nav ml-auto small">
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center" href="#Program">ПРОГРАММА</a>
+                            <a class="nav-link text-dark text-center go-to" href="#Program">ПРОГРАММА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
+                            <a class="nav-link text-dark text-center go-to" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center" href="#Comments">ОТЗЫВЫ</a>
+                            <a class="nav-link text-dark text-center go-to" href="#Comments">ОТЗЫВЫ</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center" href="#Prices">ЦЕНЫ</a>
+                            <a class="nav-link text-dark text-center go-to" href="#Prices">ЦЕНЫ</a>
                         </li>
                         <li class="nav-item dropdown d-flex flex-column justify-content-center">
                             <a class="nav-link dropdown-toggle text-dark text-center" href="#"
@@ -283,16 +283,16 @@
                     </ul>
                     <ul class="navbar-nav ml-auto small">
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight" href="#Program">ПРОГРАММА</a>
+                            <a class="nav-link text-light text-center font-weight go-to" href="#Program">ПРОГРАММА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
+                            <a class="nav-link text-light text-center font-weight go-to" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight" href="#Comments">ОТЗЫВЫ</a>
+                            <a class="nav-link text-light text-center font-weight go-to" href="#Comments">ОТЗЫВЫ</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight" href="#Prices">ЦЕНЫ</a>
+                            <a class="nav-link text-light text-center font-weight go-to" href="#Prices">ЦЕНЫ</a>
                         </li>
                         <li class="nav-item dropdown d-flex flex-column justify-content-center">
                             <a class="nav-link dropdown-toggle text-light text-center" href="#" id="coursesMainDropdown" role="button"
@@ -2231,6 +2231,13 @@ text-center text-uppercase font-weight-bolder">
         $('.dropdown>a.nav-link').each(function () {
             $(this).click();
         })
+
+    //    smooth scroll
+        $('.click-menu-element').click(function(event){
+            event.preventDefault()
+            console.log($($(this).href))
+            $('html, body').animate({scrollTop:$($(this).href).position().top}, 2000);
+        });
     })
 </script>
 <!--Jivo site-->
