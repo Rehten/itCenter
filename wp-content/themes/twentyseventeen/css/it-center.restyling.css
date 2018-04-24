@@ -819,6 +819,11 @@ div.darken-photo > .darken-background > h4 {
     text-decoration: underline;
 }
 
+/*17th section*/
+.it-center.it-map {
+    width: 100%;
+}
+
 /*19 section*/
 .logo.footer-mobile {
     min-width: 45vw;
