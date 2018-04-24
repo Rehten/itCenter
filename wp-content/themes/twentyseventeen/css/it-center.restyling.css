@@ -436,6 +436,11 @@ div.darken-photo > .darken-background > h4 {
     max-height: 40vw;
     min-height: 40vw;
     overflow: hidden;
+    z-index: 5;
+}
+
+.course-auditory-image>img {
+    z-index: -1;
 }
 
 .auditory-description {
@@ -448,7 +453,7 @@ div.darken-photo > .darken-background > h4 {
     width: calc(100%);
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
-    z-index: 5;
+    z-index: 1;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
