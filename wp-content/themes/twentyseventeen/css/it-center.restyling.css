@@ -582,13 +582,7 @@ div.darken-photo > .darken-background > h4 {
 }
 
 .format-device {
-    height: 101px;
-}
-
-@media screen and (max-width: 992px) {
-    .format-device {
-        height: 6rem;
-    }
+    max-width: 100%;
 }
 
 /*Sixth section*/
@@ -755,15 +749,20 @@ div.darken-photo > .darken-background > h4 {
 
 /*13th section*/
 .package-info {
-    display: inline-flex;
+    display: flex;
     min-width: 3rem;
     max-width: 3rem;
     min-height: 3rem;
     max-height: 3rem;
     font-size: xx-large;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.package-info>img {
+    max-width: 100%;
 }
 
 .freeze-time {
