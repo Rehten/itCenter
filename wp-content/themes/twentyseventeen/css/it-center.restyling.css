@@ -12,12 +12,12 @@
     background: rgba(38, 38, 41, 0.7);
 }
 
-.darken-background>a.text-light:hover, .darken-background>a.text-light:focus, .darken-background>a.text-light:active {
+.darken-background > a.text-light:hover, .darken-background > a.text-light:focus, .darken-background > a.text-light:active {
     background: #f8f9fa;
     color: rgba(38, 38, 41, 0.9) !important;
 }
 
-.bg-light>a.text-dark:hover, .bg-light>a.text-dark:focus, .bg-light>a.text-dark:active {
+.bg-light > a.text-dark:hover, .bg-light > a.text-dark:focus, .bg-light > a.text-dark:active {
     background: #999999 !important;
 }
 
@@ -439,7 +439,7 @@ div.darken-photo > .darken-background > h4 {
     z-index: 5;
 }
 
-.course-auditory-image>img {
+.course-auditory-image > img {
     z-index: -1;
 }
 
@@ -587,7 +587,8 @@ div.darken-photo > .darken-background > h4 {
 }
 
 .format-device {
-    max-width: 100%;
+    width: 66%;
+    transform: translateY(-0.5rem);
 }
 
 /*Sixth section*/
@@ -766,7 +767,7 @@ div.darken-photo > .darken-background > h4 {
     flex-wrap: nowrap;
 }
 
-.package-info>img {
+.package-info > img {
     max-width: 100%;
 }
 
@@ -842,3 +843,32 @@ svg {
     text-decoration: underline;
 }
 
+/*modal window*/
+.modal-window {
+    top: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+.modal-window .modal-background,.modal-window .modal-wrapper {
+    min-height: 100vh;
+    min-width: 100%;
+    visibility: hidden;
+    transition: visibility 0.2s ease-in-out 0.1s;
+    pointer-events: none;
+    position: relative;
+}
+
+.modal-window.showed-modal {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-window.showed-modal .modal-background,.modal-window.showed-modal  .modal-wrapper {
+    visibility: visible;
+    pointer-events: auto;
+}
