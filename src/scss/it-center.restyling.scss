@@ -159,6 +159,11 @@ object, svg {
 
 /*}*/
 
+.nav-font-small {
+    font-size: 75%;
+    font-weight: initial;
+}
+
 @media screen and (min-width: 2000px) {
     body {
         font-size: 4.5rem !important;

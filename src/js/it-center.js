@@ -108,7 +108,7 @@ jQuery(document).ready(function () {
         }
     })
 
-    jQuery("a.nav-link.scrollto").on('click', function (event) {
+    jQuery("a.nav-link.scrollto, a.scrollto").on('click', function (event) {
         event.preventDefault();
 
         jQuery('html, body').animate({
@@ -288,30 +288,31 @@ jQuery(document).ready(function () {
             isModalShowed = true
             jQuery('#Modal').addClass('showed-modal')
         }
+
     })
 
 
-    // Появление модального окна через 10 секунд после открытия страницы
-    let self = this
-    setTimeout(function() {
-        if(!isModalShowed && !localStorage.getItem('subscribeOnTryingLesson')) {
-            isModalShowed = true
-            jQuery('#TryingLessonModal').addClass('showed-modal')
-        }
-    }, 30000)
-
-    jQuery('#TryingLessonButton').click(function () {
-        localStorage.setItem('subscribeOnTryingLesson', 1)
-    })
-
-    jQuery('.hide-trying-modal').click(function (event) {
-        if (isModalShowed) {
-            isModalShowed = false
-            jQuery('#TryingLessonModal').removeClass('showed-modal')
-        } else {
-            isModalShowed = true
-            jQuery('#TryingLessonModal').addClass('showed-modal')
-        }
-    })
+    // // Появление модального окна через 10 секунд после открытия страницы
+    // let self = this
+    // setTimeout(function() {
+    //     if(!isModalShowed && !localStorage.getItem('subscribeOnTryingLesson')) {
+    //         isModalShowed = true
+    //         jQuery('#TryingLessonModal').addClass('showed-modal')
+    //     }
+    // }, 30000)
+    //
+    // jQuery('#TryingLessonButton').click(function () {
+    //     localStorage.setItem('subscribeOnTryingLesson', 1)
+    // })
+    //
+    // jQuery('.hide-trying-modal').click(function (event) {
+    //     if (isModalShowed) {
+    //         isModalShowed = false
+    //         jQuery('#TryingLessonModal').removeClass('showed-modal')
+    //     } else {
+    //         isModalShowed = true
+    //         jQuery('#TryingLessonModal').addClass('showed-modal')
+    //     }
+    // })
 
 })

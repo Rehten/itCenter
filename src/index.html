@@ -143,12 +143,12 @@
                     <ul class="navbar-nav mr-auto small">
 
                     </ul>
-                    <ul class="navbar-nav ml-auto small">
+                    <ul class="navbar-nav ml-auto nav-font-small">
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-dark text-center scrollto" href="#Program">ПРОГРАММА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-dark text-center scrollto" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
+                            <a class="nav-link text-dark text-center scrollto" href="#Teachers">КОМАНДА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-dark text-center scrollto" href="#Data">РАСПИСАНИЕ</a>
@@ -281,12 +281,12 @@
                     <ul class="navbar-nav mr-auto small">
 
                     </ul>
-                    <ul class="navbar-nav ml-auto small">
+                    <ul class="navbar-nav ml-auto nav-font-small">
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-light text-center font-weight scrollto" href="#Program">ПРОГРАММА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
-                            <a class="nav-link text-light text-center font-weight scrollto" href="#Teachers">ПРЕПОДАВАТЕЛИ</a>
+                            <a class="nav-link text-light text-center font-weight scrollto" href="#Teachers">КОМАНДА</a>
                         </li>
                         <li class="nav-item d-flex flex-column justify-content-center">
                             <a class="nav-link text-light text-center font-weight scrollto" href="#Data">РАСПИСАНИЕ</a>
@@ -330,13 +330,13 @@
                     знаний</h5>
             </div>
             <div class="col-md-8 p-3 p-md-4 my-md-3 offset-md-2 mx-auto mt-lg-0 mt-md-2">
-                <p class="lead font-weight-normal">Не уверен в своих силах? Запишись на пробный урок</p>
+                <p class="lead font-weight-normal text-uppercase">Не уверен в своих силах? Запишись на пробный урок</p>
                 <p class="font-weight-normal text-uppercase">Идет набор осталось <span
                         class="text-warning font-weight-bold">4</span>
                     места
                 </p>
-                <a class="btn btn-outline-light text-uppercase col-xl-3 col-lg-4 col-md-8 rounded-0 py-2 px-3"
-                   href="#"><span class="h5 subscription-button">Записаться</span></a>
+                <a class="btn btn-outline-light btn-lg scrollto text-uppercase col-xl-3 col-lg-4 col-md-8 rounded-0 py-2 px-3"
+                   href="#TryingLessonModal"><span class="h5">Записаться</span></a>
             </div>
             <div class="product-device box-shadow d-none d-md-block"></div>
             <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -440,7 +440,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="career-currency correct-senior">
-                    <h5 class="text-muted">2700-4000$</h5>
+                    <h5 class="text-muted">2500-4000$</h5>
                 </div>
                 <div class="career-time">
                     <h6 class="small text-uppercase">Спустя<br> 2-4 года</h6>
@@ -508,7 +508,7 @@
                                 <img class="fourth-img" src="./images/career/b3foto4.png" alt="">
                                 <div class="position-absolute carousel-comment">
                                     <h5 class="text-uppercase text-dark">Спустя<br> 2-4 года</h5>
-                                    <h4 class="text-muted">2700-4000$</h4>
+                                    <h4 class="text-muted">2500-4000$</h4>
                                 </div>
                             </div>
                         </div>
@@ -610,9 +610,9 @@
             <div class="col-lg-3 col-md-6 offset-sm-0 offset-md-0 mb-5">
                 <h6 class="text-uppercase text-format text-format-bottom">Количество в группе</h6>
                 <div class="col-lg-12 py-3 px-3 border border-dark">
-                    <h1 class="display-1">15</h1>
+                    <h1 class="display-1">10</h1>
                 </div>
-                <h6 class="text-uppercase text-format mt-3">группы до<br> 15 человек</h6>
+                <h6 class="text-uppercase text-format mt-3">группы до<br> 10 человек</h6>
             </div>
             <div class="col-lg-3 col-md-6 offset-sm-0 offset-md-0 mb-5">
                 <h6 class="text-uppercase text-format text-format-bottom">Для обучения <span class="text-danger">необходим:</span>
@@ -1216,13 +1216,13 @@
                             <h3 class="pl-3 mt-2 font-weight-bold text-uppercase">Стоимость:</h3>
                         </div>
                         <div class="px-0 col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
-                            <h5 class="px-0 mt-2 font-weight-bold text-uppercase">2100 грн</h5>
+                            <h5 class="px-0 mt-2 font-weight-bold text-uppercase">1750 грн</h5>
                             <div>
                                 <a class="px-2 btn btn-outline-light border border-dark rounded-0 text-uppercase subscription-button">Записаться</a>
                             </div>
                         </div>
                         <div class="px-0 col-xl-2 col-lg-3 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-column justify-content-center align-items-center">
-                            <h5 class="px-0 mt-2 font-weight-bold text-uppercase">2700 грн</h5>
+                            <h5 class="px-0 mt-2 font-weight-bold text-uppercase">2500 грн</h5>
                             <div>
                                 <a class="px-2 btn btn-outline-light border border-dark rounded-0 text-uppercase subscription-button">Записаться</a>
                             </div>
@@ -1329,7 +1329,7 @@
                             <h5 class="mt-2 font-weight-bold text-uppercase">Стоимость:</h5>
                         </div>
                         <div class="col-sm-4 col-4 pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-start align-items-center">
-                            <h4 class="px-0 mt-2 text-left font-weight-bold">2100 грн.</h4>
+                            <h4 class="px-0 mt-2 text-left font-weight-bold">1750 грн.</h4>
                         </div>
                         <div class="col-sm-2 col-2 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-center align-items-center">
                             <a class="px-1 btn btn-outline-light border border-dark rounded-0 text-uppercase subscription-button">
@@ -1429,7 +1429,7 @@
                             <h5 class="mt-2 font-weight-bold text-uppercase">Стоимость:</h5>
                         </div>
                         <div class="col-sm-4 col-4 pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-start align-items-center">
-                            <h4 class="px-0 mt-2 text-left font-weight-bold">2700 грн.</h4>
+                            <h4 class="px-0 mt-2 text-left font-weight-bold">2500 грн.</h4>
                         </div>
                         <div class="col-sm-2 col-2 text-left pb-lg-2 pt-lg-3 d-inline-flex flex-row justify-content-center align-items-center">
                             <a class="px-1 btn btn-outline-light border border-dark rounded-0 text-uppercase subscription-button">
@@ -1882,13 +1882,49 @@ text-center text-uppercase font-weight-bolder">
     </div>
 </div>
 
+<!--16th section-->
+<div id="TryingLessonModal" class="container-fluid mt-5 px-0">
+    <div class="p-2 m-md-3 mt-5 text-center">
+        <div class="col-md-12 mx-auto mb-5">
+            <h1 class="font-weight-bold text-uppercase text-center">Записаться на пробное занятие</h1>
+        </div>
+        <div class="col-xl-11 mx-auto col-lg-11 col-md-12 px-xl-3 px-lg-1 px-md-3 row text-center">
+            <div class="col-lg-6 col-md-12">
+                <p class="text-left text-uppercase font-weight-bolder"><span class="font-weight-bold">IT-CENTER</span> предлагает посетить <span class="font-weight-bold">1 день курса Основы Java и убедится в качестве обучения</span>, методике и просто познакомится с нами.
+                </p>
+                <p class="text-left text-uppercase font-weight-bolder mt-3">
+                    Посетив данный урок <span class="font-weight-bold">Вы поймете, что программировать может каждый</span>, главное делать это под руководством опытных преподавателей и задавать вопросы.
+                </p>
+                <p class="text-left text-uppercase font-weight-bolder mt-3">
+                    Количество мест в группе ограничено <span class="font-weight-bold text-danger">10 мест!</span>
+                    <br>
+                    Для записи в группу нужно внести резерв за место в размере <span class="font-weight-bold">250 грн.</span>
+                    <br>
+                    Эта сумма возвращается на следующий день, если Вам что-то не понравится.
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <h3 class="text-uppercase font-weight-bolder px-5">Оставьте Ваши данные и наш менеджер свяжется с Вами</h3>
+                <?php
+                add_filter('widget_text', 'do_shortcode');
+                echo do_shortcode('[contact-form-7 id="29" title="Без названия"]');
+                ?>
+
+                <!--<a class="px-4 btn btn-outline-light border border-dark rounded-0 text-uppercase font-weight-bolder">-->
+                    <!--Записаться-->
+                <!--</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--17th section-->
 <div id="Contacts" class="container-fluid mt-5">
     <div class="p-2 m-md-3 mt-5 text-center">
         <div class="col-md-12 mx-auto mb-5">
             <h1 class="font-weight-bold text-uppercase text-center">Контакты</h1>
         </div>
-        <div class="col-md-12 text-center">
+        <div class="col-xl-11 mx-auto col-lg-11 col-md-12 px-xl-3 px-lg-1 px-md-3 text-center">
             <div class="col-xl-4 col-lg-5 col-md-6 it-guide position-absolute guide-background border border-light box-shadow text-light p-2 m-3">
                 <div class="col-12 text-left">
                     <h6>Адрес</h6>
@@ -2013,30 +2049,26 @@ text-center text-uppercase font-weight-bolder">
     </div>
 </div>
 
-<!--Пробное занятие-->
-<div id="TryingLessonModal" class="modal-window position-fixed">
-    <div class="darken-background modal-background position-absolute hide-trying-modal">
-    </div>
-    <div class="modal-wrapper d-table">
-        <div class="d-table-cell align-middle">
-            <div class="modal-content col-xl-5 col-lg-7 col-md-9 rounded-0 bg-light text-dark p-1 mx-auto box-shadow">
-                <div class="position-absolute col-12">
-                    <div class="d-flex flex-row-reverse">
-                        <a class="cursor-pointer hide-trying-modal">
-                            <img src="./svg/clear.svg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="m-4 small">
-                    <?php
-                add_filter('widget_text', 'do_shortcode');
-                echo do_shortcode('[contact-form-7 id="29" title="Без названия"]');
-            ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--&lt;!&ndash;Пробное занятие&ndash;&gt;-->
+<!--<div id="TryingLessonModal" class="modal-window position-fixed">-->
+    <!--<div class="darken-background modal-background position-absolute hide-trying-modal">-->
+    <!--</div>-->
+    <!--<div class="modal-wrapper d-table">-->
+        <!--<div class="d-table-cell align-middle">-->
+            <!--<div class="modal-content col-xl-5 col-lg-7 col-md-9 rounded-0 bg-light text-dark p-1 mx-auto box-shadow">-->
+                <!--<div class="position-absolute col-12">-->
+                    <!--<div class="d-flex flex-row-reverse">-->
+                        <!--<a class="cursor-pointer hide-trying-modal">-->
+                            <!--<img src="./svg/clear.svg" alt="">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="m-4 small">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!--Jivo site-->
 <script type='text/javascript'>

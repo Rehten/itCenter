@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
@@ -47,7 +48,8 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Argent Project',
-            template: 'src/index.html'
+            template: 'src/index.html',
+            inject: 'head'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,
@@ -56,11 +58,21 @@ module.exports = {
             // tslint: './tslint.json',
         }),
         new CopyWebpackPlugin([
-            {from:'src/fonts',to:'fonts'},
-            {from:'src/images',to:'images'},
-            {from:'src/svg',to:'svg'},
+            {from: 'src/fonts', to: 'fonts'},
+            {from: 'src/images', to: 'images'},
+            {from: 'src/svg', to: 'svg'},
             {from: 'src/index.html', to: 'index.php'}
         ]),
+        new ReplaceInFileWebpackPlugin([{
+            dir: 'dist',
+            files: ['index.html'],
+            rules: [
+                {
+                    search: /src="\//g,
+                    replace: 'src="./'
+                }
+            ]
+        }]),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'libraries'
         }),
