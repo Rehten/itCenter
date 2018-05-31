@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
@@ -35,6 +34,11 @@ module.exports = {
             },
             {
                 exclude: /node_modules/,
+                test: /\.pug/,
+                loaders: ['pug-loader']
+            },
+            {
+                exclude: /node_modules/,
                 test: /\.scss$/,
                 loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
@@ -47,8 +51,57 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Argent Project',
-            template: 'src/index.html',
+            title: 'IT-Center',
+            template: 'src/wp-index.pug',
+            filename: 'index.html',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-index.pug',
+            filename: 'wp-content/themes/twentyseventeen/index.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-osnovi.pug',
+            filename: 'osnovi.html',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-osnovi.pug',
+            filename: 'wp-content/themes/twentyseventeen/osnovi.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-header.pug',
+            filename: 'wp-content/themes/twentyseventeen/header.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-schedule.pug',
+            filename: 'wp-content/themes/twentyseventeen/schedule.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-schedule.pug',
+            filename: 'schedule.html',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-feedback.pug',
+            filename: 'wp-content/themes/twentyseventeen/feedback.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-feedback.pug',
+            filename: 'feedback.html',
             inject: 'head'
         }),
         new ForkTsCheckerWebpackPlugin({
@@ -60,23 +113,15 @@ module.exports = {
         new CopyWebpackPlugin([
             {from: 'src/fonts', to: 'fonts'},
             {from: 'src/images', to: 'images'},
-            {from: 'src/svg', to: 'svg'},
-            {from: 'src/index.html', to: 'index.php'}
+            {from: 'src/svg', to: 'svg'}
         ]),
-        new ReplaceInFileWebpackPlugin([{
-            dir: 'dist',
-            files: ['index.html'],
-            rules: [
-                {
-                    search: /src="\//g,
-                    replace: 'src="./'
-                }
-            ]
-        }]),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'libraries'
         }),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-    ]
+        new webpack.HotModuleReplacementPlugin(),
+    ],
+    resolve: {
+        extensions: ['.ts', '.js', '.json', 'pug']
+    }
 };
