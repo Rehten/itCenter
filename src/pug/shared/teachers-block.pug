@@ -1,3 +1,6 @@
+-
+    var url = require('./../../variables-for-templates').url
+
 #Teachers.container-fluid.mt-5
     // Nineth block
     .p-2.m-md-3.mt-5.text-center
@@ -7,14 +10,14 @@
         .col-md-12.mx-0.px-0.row.text-center
             #Master1Ref.col-lg-4.col-md-4.cursor-pointer
                 .col-lg-12
-                    img.teachers-photo(src='./images/teachers/boldir.png', alt='')
+                    img.teachers-photo(src=url + '/images/teachers/boldir.png', alt='')
                 h5.text-uppercase.mt-3.font-weight-bolder Евгений Болдырь
                 p.text-uppercase.text-primary.toggle-ref.small.font-weight-bolder
                     span.small Смотреть о преподавателе
                 #Master1.arrow-up.black
             #Master2Ref.col-lg-4.col-md-4.cursor-pointer
                 .col-lg-12
-                    img.teachers-photo(src='./images/teachers/bok.png', alt='')
+                    img.teachers-photo(src=url + '/images/teachers/bok.png', alt='')
                 h5.text-uppercase.mt-3.font-weight-bolder
                     | Боккар Сергей
                 p.text-uppercase.text-primary.toggle-ref.small.font-weight-bolder
@@ -22,7 +25,7 @@
                 #Master2.arrow-up.black.hidden-block
             #Master3Ref.col-lg-4.col-md-4.cursor-pointer
                 .col-lg-12
-                    img.teachers-photo(src='./images/teachers/kozak.png', alt='')
+                    img.teachers-photo(src=url + '/images/teachers/kozak.png', alt='')
                 h5.text-uppercase.mt-3.font-weight-bolder Виталий Козак
                 p.text-uppercase.text-primary.toggle-ref.small.font-weight-bolder
                     span.small Смотреть о преподавателе

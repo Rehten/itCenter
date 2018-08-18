@@ -5,13 +5,9 @@
             h1.font-weight-bold.text-uppercase.text-center Java OOP
         .col-xl-10.offset-xl-1.col-lg-12.offset-lg-0.row.text-center
             #hypercomments_widget_oop
-            script(type='text/javascript').
+            script(type='text/javascript')#OOPScript.
                 _hcwp = window._hcwp || [];
-                _hcwp.push({
-                    widget: "Stream",
-                    widget_id: 60064,
-                    href: "it-centre.net/osnovi/"
-                });
+                _hcwp.push({widget: "Stream", widget_id: 60062});
                 (function () {
                     if ("HC_LOAD_INIT" in window) return;
                     HC_LOAD_INIT = true;
@@ -20,6 +16,7 @@
                     hcc.type = "text/javascript";
                     hcc.async = true;
                     hcc.src = ("https:" == document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/60062/" + lang + "/widget.js";
-                    var s = document.getElementsByTagName("script")[0];
+                    var s = document.getElementById("OOPScript");
                     s.parentNode.insertBefore(hcc, s.nextSibling);
+                    HC_LOAD_INIT = false;
                 })();

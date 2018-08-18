@@ -13,7 +13,14 @@
 
 .nav-link {
   display: block;
-  padding: $nav-link-padding-y $nav-link-padding-x;
+  padding: 2 * $nav-link-padding-y $nav-link-padding-x;
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: portrait) {
+    font-size: 175%;
+  }
+
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: landscape) {
+    font-size: 150%;
+  }
 
   @include hover-focus {
     text-decoration: none;

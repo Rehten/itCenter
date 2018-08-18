@@ -1,3 +1,6 @@
+-
+    var url = require('./variables-for-templates').url
+
 | <?php  /* Template Name: Schedule */ ?>
 doctype html
 html(lang='en')
@@ -10,23 +13,23 @@ html(lang='en')
             gtag('config', 'UA-110612076-1');
         meta(charset='UTF-8')
         title Курсы по программированию
-        link(rel='icon', type='image/x-icon', href='./favicon.ico')
+        link(rel='icon', type='image/x-icon', href=url + '/favicon.ico')
     body
         style.
             /*Add fonts*/
             @font-face {
                 font-family: acrom;
                 font-weight: bold;
-                src: url("./fonts/acrom900.otf") format("opentype");
+                src: url("#{url}/fonts/acrom900.otf") format("opentype");
             }
             @font-face {
                 font-family: acrom600;
-                src: url("./fonts/acrom600.otf") format('opentype');
+                src: url("#{url}/fonts/acrom600.otf") format('opentype');
             }
             @font-face {
                 font-family: acrom;
                 font-weight: initial;
-                src: url("./fonts/acrom400.otf") format('opentype');
+                src: url("#{url}/fonts/acrom400.otf") format('opentype');
             }
             body {
                 font-family: acrom, Lucida Grande, sans-serif;
@@ -40,6 +43,7 @@ html(lang='en')
         include pug/courses-schedule/learning-start-block
         div.col-10.mx-auto.my-4.d-flex.flex-row.align-items-center.justify-content-center
             span.font-weight-bolder.text-dark.text-uppercase.text-center.h5.mb-0 Остались вопросы? Задайте их менеджеру
-            a.ml-3.btn.px-5.py-2.btn-outline-light.rounded-0.border.border-dark.text-dark.text-uppercase
+            a.ml-3.btn.px-5.py-2.btn-outline-light.rounded-0.border.border-dark.text-dark.text-uppercase.subscription-button
                 span.h5 Задать
+        include pug/java-osnovi/osnovi-modal
         include pug/shared/footer

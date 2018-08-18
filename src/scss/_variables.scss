@@ -168,6 +168,7 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
+  md-hor: 991px,
   lg: 992px,
   xl: 1200px
 ) !default;
@@ -240,7 +241,7 @@ $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;

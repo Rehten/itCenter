@@ -1,8 +1,11 @@
+-
+    var url = require('./../../variables-for-templates').url
+
 #StickHeader.col-md-12.bg-light.position-fixed.px-2.stick-header.box-shadow
     .col-xl-12.col-lg-12
         nav.navbar.navbar-expand-lg.navbar-light.mx-xl-5.mx-lg-3.mx-md-0
-            a.navbar-brand.pt-0.pb-lg-2.pb-md-1.d-flex.align-items-center.svg-font(href='#')
-                svg#svg2.svg-logo.explicit.old-browsers.inverted(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', width='250', height='38', viewbox='0 0 2600 432.50005', version='1.1', inkscape:version='0.91 r13725', sodipodi:docname='drawing-2.svg')
+            a.navbar-brand.pt-0.pb-md-0.d-flex.align-items-center.svg-font(href=url)
+                svg#svg2.svg-logo.explicit.old-browsers.inverted(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', viewbox='0 0 2600 432.50005', version='1.1', inkscape:version='0.91 r13725', sodipodi:docname='drawing-2.svg')
                     style(type='text/css').
                         .svg-logo {
                             cursor: pointer
@@ -29,8 +32,11 @@
             .md-show.d-inline-flex.align-items-center
                 h6.mb-0.small.text-center.mr-4(href='#')
                     a.text-dark(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
-                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#StickerNavBar', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
-                    span.navbar-toggler-icon
+                button.navbar-toggler.header-button-hamburger(type='button', data-toggle='collapse', data-target='#StickerNavBar', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
+                    span.bg-dark
+                    span.bg-dark
+                    span.bg-dark
+                    span.bg-dark
             #StickerNavBar.collapse.navbar-collapse
                 ul.navbar-nav.mr-auto.small
                 ul.navbar-nav.ml-auto.nav-font-small
@@ -39,28 +45,28 @@
                     li.nav-item.d-flex.flex-column.justify-content-center
                         a.nav-link.text-dark.text-center.scrollto(href='#Teachers') КОМАНДА
                     li.nav-item.d-flex.flex-column.justify-content-center
-                        a.nav-link.text-dark.text-center.scrollto(href='#Data') РАСПИСАНИЕ
+                        a.nav-link.text-dark.text-center(href=url + '/schedule') РАСПИСАНИЕ
                     li.nav-item.d-flex.flex-column.justify-content-center
-                        a.nav-link.text-dark.text-center.scrollto(href='#Comments') ОТЗЫВЫ
+                        a.nav-link.text-dark.text-center(href=url + '/feedback') ОТЗЫВЫ
                     li.nav-item.d-flex.flex-column.justify-content-center
                         a.nav-link.text-dark.text-center.scrollto(href='#Prices') ЦЕНЫ
                     li.nav-item.dropdown.d-flex.flex-column.justify-content-center
                         a#navbarDropdown.nav-link.dropdown-toggle.text-dark.text-center(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                             | КУРСЫ
                         .dropdown-menu.rounded-0.bg-light(aria-labelledby='navbarDropdown')
-                            a.dropdown-item.text-dark(href='http://it-center.com.ua/') Основы Java
-                            a.dropdown-item.text-dark(href='http://it-centre.net/java-oop') Java ООП
-                            a.dropdown-item.text-dark(href='http://it-centre.net/java-developer') Java Developer
+                            a.dropdown-item.py-2.text-dark(href=url + '/osnovi') Основы Java
+                            a.dropdown-item.py-2.text-dark(href='http://it-centre.net/java-oop') Java ООП
+                            a.dropdown-item.py-2.text-dark(href='http://it-centre.net/java-developer') Java Developer
                     li.lg-show.nav-item.text-dark
-                        span.nav-link.active.text-center.d-flex.flex-column.justify-content-around
-                            a.text-dark(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
-                            a.text-dark(href='tel:+38 (063) 237-37-07') +38 (063) 237-37-07
+                        span.nav-link.active.text-center.d-flex.flex-column.justify-content-around.py-2
+                            a.text-dark.py-1(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
+                            a.text-dark.py-1(href='tel:+38 (063) 237-37-07') +38 (063) 237-37-07
 .col-md-12.border-bottom.px-2
     .col-xl-12.col-lg-12
         // TODO: fix nav-links colors
         nav.navbar.navbar-expand-lg.navbar-dark.rounded.bg-transparent.mx-xl-5.mx-lg-3.mx-md-0
-            a.navbar-brand.pt-0.pb-lg-2.pb-md-1.d-flex.align-items-center.svg-font(href='#')
-                svg#svg2.svg-logo.explicit.old-browsers.default(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', width='250', height='38', viewbox='0 0 2600 432.50005', version='1.1', inkscape:version='0.91 r13725', sodipodi:docname='drawing-2.svg')
+            a.navbar-brand.pt-0.pb-md-0.d-flex.align-items-center.svg-font(href=url)
+                svg#svg2.svg-logo.explicit.old-browsers.default(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd', xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape', viewbox='0 0 2600 432.50005', version='1.1', inkscape:version='0.91 r13725', sodipodi:docname='drawing-2.svg')
                     style(type='text/css').
                         .svg-logo {
                             cursor: pointer
@@ -87,8 +93,11 @@
             .md-show.d-inline-flex.align-items-center
                 h6.mb-0.small.text-light.text-center.font-weight.mr-4(href='#')
                     a.text-light(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
-                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExample09', aria-controls='navbarsExample09', aria-expanded='false', aria-label='Toggle navigation')
-                    span.navbar-toggler-icon
+                button.navbar-toggler.header-button-hamburger(type='button', data-toggle='collapse', data-target='#navbarsExample09', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
+                    span.bg-light
+                    span.bg-light
+                    span.bg-light
+                    span.bg-light
             #navbarsExample09.collapse.navbar-collapse
                 ul.navbar-nav.mr-auto.small
                 ul.navbar-nav.ml-auto.nav-font-small
@@ -97,19 +106,19 @@
                     li.nav-item.d-flex.flex-column.justify-content-center
                         a.nav-link.text-light.text-center.font-weight.scrollto(href='#Teachers') КОМАНДА
                     li.nav-item.d-flex.flex-column.justify-content-center
-                        a.nav-link.text-light.text-center.font-weight.scrollto(href='#Data') РАСПИСАНИЕ
+                        a.nav-link.text-light.text-center.font-weight(href=url + '/schedule') РАСПИСАНИЕ
                     li.nav-item.d-flex.flex-column.justify-content-center
-                        a.nav-link.text-light.text-center.font-weight.scrollto(href='#Comments') ОТЗЫВЫ
+                        a.nav-link.text-light.text-center.font-weight(href=url + '/feedback') ОТЗЫВЫ
                     li.nav-item.d-flex.flex-column.justify-content-center
                         a.nav-link.text-light.text-center.font-weight.scrollto(href='#Prices') ЦЕНЫ
                     li.nav-item.dropdown.d-flex.flex-column.justify-content-center
                         a#coursesMainDropdown.nav-link.dropdown-toggle.text-light.text-center(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                             | КУРСЫ
                         .dropdown-menu.rounded-0.darken-background.border.border-light(aria-labelledby='coursesMainDropdown')
-                            a.dropdown-item.text-light(href='http://it-center.com.ua/') Основы Java
-                            a.dropdown-item.text-light(href='http://it-centre.net/java-oop') Java ООП
-                            a.dropdown-item.text-light(href='http://it-centre.net/java-developer') Java Developer
+                            a.dropdown-item.py-2.text-light(href=url + '/osnovi') Основы Java
+                            a.dropdown-item.py-2.text-light(href='http://it-centre.net/java-oop') Java ООП
+                            a.dropdown-item.py-2.text-light(href='http://it-centre.net/java-developer') Java Developer
                     li.lg-show.nav-item
-                        span.nav-link.active.text-center.d-flex.flex-column.justify-content-around
-                            a.text-light(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
-                            a.text-light(href='tel:+38 (063) 237-37-07') +38 (063) 237-37-07
+                        span.nav-link.active.text-center.d-flex.flex-column.justify-content-around.py-2
+                            a.text-light.py-1(href='tel:+38 (044) 237-37-07') +38 (044) 237-37-07
+                            a.text-light.py-1(href='tel:+38 (063) 237-37-07') +38 (063) 237-37-07

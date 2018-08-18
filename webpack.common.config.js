@@ -49,6 +49,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'IT-Center',
@@ -102,6 +105,18 @@ module.exports = {
             title: 'IT-Center',
             template: 'src/wp-feedback.pug',
             filename: 'feedback.html',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-success.pug',
+            filename: 'wp-content/themes/twentyseventeen/success.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'IT-Center',
+            template: 'src/wp-success.pug',
+            filename: 'success.html',
             inject: 'head'
         }),
         new ForkTsCheckerWebpackPlugin({

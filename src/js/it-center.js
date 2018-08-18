@@ -1,4 +1,4 @@
-import jQuery from 'jquery'
+import jQuery from './jquery-slim.min'
 import Hammer from './hammer'
 
 jQuery(document).ready(function () {
@@ -49,13 +49,15 @@ jQuery(document).ready(function () {
     // toggled answer-question panels
     jQuery('.cursor-pointer').each(function () {
         let elem = jQuery(this)
-        elem.click(function () {
-            if (elem.hasClass('answered')) {
-                elem.removeClass('answered')
-            } else {
-                elem.addClass('answered')
-            }
-        })
+        if (elem) {
+            elem.click(function () {
+                if (elem.hasClass('answered')) {
+                    elem.removeClass('answered')
+                } else {
+                    elem.addClass('answered')
+                }
+            })
+        }
     })
 
     jQuery('.open-program').click(function () {
@@ -110,10 +112,13 @@ jQuery(document).ready(function () {
 
     jQuery("a.nav-link.scrollto, a.scrollto").on('click', function (event) {
         event.preventDefault();
-
-        jQuery('html, body').animate({
-            scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 100
-        }, 500);
+        if (jQuery(jQuery.attr(this, 'href')).length) {
+            jQuery('html, body').animate({
+                scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 100
+            }, 500);
+        } else {
+            document.location = `${document.location.origin}/osnovi/${jQuery.attr(this, 'href')}`
+        }
     });
 
     // jQuery("a.scrollto").click(function () {
@@ -130,124 +135,127 @@ jQuery(document).ready(function () {
 
     let transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend'
 
-    let Carousel: any = function (selector, callback) {
-        let self = this
-        let jQuerycarousel = jQuery(selector)
-        let jQuerycontainer = jQuery('.pane-container', selector)
-        let jQuerypanes = jQuery('.pane', selector)
+    let Carousel = function (selector, callback) {
+        if(jQuery('.pane-container').length) {
+            let self = this
+            let jQuerycarousel = jQuery(selector)
+            let jQuerycontainer = jQuery('.pane-container', selector)
+            let jQuerypanes = jQuery('.pane', selector)
 
-        let paneWidth = 0
-        let paneCount = jQuerypanes.length
-        let panBoundary = 1 // if the pane is paned 1, switch to the next pane.
+            let paneWidth = 0
+            let paneCount = jQuerypanes.length
+            let panBoundary = 1 // if the pane is paned 1, switch to the next pane.
 
-        let currentPane = 0
+            let currentPane = 0
 
-        callback(currentPane)
-
-        function setPaneSize() {
-            paneWidth = jQuerycarousel.width();
-            jQuerypanes.each(function (i) {
-                jQuery(this).width(paneWidth)
-            })
-            jQuerycontainer.width(paneWidth * paneCount)
-        }
-
-        self.init = function () {
-            setPaneSize();
-            jQuery(window).on('load resize orientationchange', function () {
-                setPaneSize()
-                self.showPane(currentPane)
-            })
-        }
-
-        self.showPane = function (index) {
-            currentPane = Math.max(0, Math.min(index, paneCount - 1))
-            setContainerOffsetX(-currentPane * paneWidth, true)
-        }
-
-        function setContainerOffsetX(offsetX, doTransition) {
-            if (doTransition) {
-                jQuerycontainer
-                    .addClass('transition')
-                    .one(transitionEnd, function () {
-                        jQuerycontainer.removeClass('transition')
-                    })
-            }
-            jQuerycontainer.css({
-                left: offsetX
-            });
-        }
-
-        self.next = function () {
-            self.showPane(++currentPane)
             callback(currentPane)
-        }
-        self.prev = function () {
-            self.showPane(--currentPane)
-            callback(currentPane)
-        }
 
-        function handleHammer(e) {
-            switch (e.type) {
-                case 'swipeleft':
-                case 'swiperight':
-                    handleSwipe(e)
-                    break
-                case 'panleft':
-                case 'panright':
-                case 'panend':
-                case 'pancancel':
-                    handlePan(e)
-                    break
+            function setPaneSize() {
+                paneWidth = jQuerycarousel.width();
+                jQuerypanes.each(function (i) {
+                    jQuery(this).width(paneWidth)
+                })
+                jQuerycontainer.width(paneWidth * paneCount)
             }
-        }
 
-        function handleSwipe(e) {
-            switch (e.direction) {
-                case Hammer.DIRECTION_LEFT:
-                    self.next()
-                    break
-                case Hammer.DIRECTION_RIGHT:
-                    self.prev()
-                    break
+            self.init = function () {
+                setPaneSize();
+                jQuery(window).on('load resize orientationchange', function () {
+                    setPaneSize()
+                    self.showPane(currentPane)
+                })
             }
-        }
 
-        function outOfBound() {
-            let left = jQuerycontainer.position().left
-            return (currentPane == 0 && left >= 0) ||
-                (currentPane == paneCount - 1 && left <= -paneWidth * (paneCount - 1))
-        }
+            self.showPane = function (index) {
+                currentPane = Math.max(0, Math.min(index, paneCount - 1))
+                setContainerOffsetX(-currentPane * paneWidth, true)
+            }
 
-        function handlePan(e) {
-            switch (e.type) {
-                case 'panleft':
-                case 'panright':
-                    // Slow down at the first and last pane.
-                    if (outOfBound()) {
-                        e.deltaX *= .2
-                    }
-                    setContainerOffsetX(-currentPane * paneWidth + e.deltaX)
-                    break
-                case 'panend':
-                case 'pancancel':
-                    if (Math.abs(e.deltaX) > paneWidth * panBoundary) {
-                        if (e.deltaX > 0) {
-                            self.prev()
-                        } else {
-                            self.next()
+            function setContainerOffsetX(offsetX, doTransition) {
+                if (doTransition) {
+                    jQuerycontainer
+                        .addClass('transition')
+                        .one(transitionEnd, function () {
+                            jQuerycontainer.removeClass('transition')
+                        })
+                }
+                jQuerycontainer.css({
+                    left: offsetX
+                });
+            }
+
+            self.next = function () {
+                self.showPane(++currentPane)
+                callback(currentPane)
+            }
+            self.prev = function () {
+                self.showPane(--currentPane)
+                callback(currentPane)
+            }
+
+            function handleHammer(e) {
+                switch (e.type) {
+                    case 'swipeleft':
+                    case 'swiperight':
+                        handleSwipe(e)
+                        break
+                    case 'panleft':
+                    case 'panright':
+                    case 'panend':
+                    case 'pancancel':
+                        handlePan(e)
+                        break
+                }
+            }
+
+            function handleSwipe(e) {
+                switch (e.direction) {
+                    case Hammer.DIRECTION_LEFT:
+                        self.next()
+                        break
+                    case Hammer.DIRECTION_RIGHT:
+                        self.prev()
+                        break
+                }
+            }
+
+            function outOfBound() {
+                let left = jQuerycontainer.position().left
+                return (currentPane == 0 && left >= 0) ||
+                    (currentPane == paneCount - 1 && left <= -paneWidth * (paneCount - 1))
+            }
+
+            function handlePan(e) {
+                switch (e.type) {
+                    case 'panleft':
+                    case 'panright':
+                        // Slow down at the first and last pane.
+                        if (outOfBound()) {
+                            e.deltaX *= .2
                         }
-                    } else {
-                        self.showPane(currentPane)
-                    }
-                    break
+                        setContainerOffsetX(-currentPane * paneWidth + e.deltaX)
+                        break
+                    case 'panend':
+                    case 'pancancel':
+                        if (Math.abs(e.deltaX) > paneWidth * panBoundary) {
+                            if (e.deltaX > 0) {
+                                self.prev()
+                            } else {
+                                self.next()
+                            }
+                        } else {
+                            self.showPane(currentPane)
+                        }
+                        break
+                }
             }
+
+            let hammer = new Hammer(jQuerycarousel[0]).on(
+                'swipeleft swiperight panleft panright panend pancancel',
+                handleHammer
+            )
         }
 
-        let hammer = new Hammer(jQuerycarousel[0]).on(
-            'swipeleft swiperight panleft panright panend pancancel',
-            handleHammer
-        )
     }
 
     // synchronize markers colors with carousel items in Carousel callback
@@ -272,15 +280,21 @@ jQuery(document).ready(function () {
 
 
     })
-    c.init()
-    c.showPane(0)
+
+    try {
+        c.init()
+        c.showPane(0)
+    } catch (err) {
+
+    }
+
 
     //toggle modal
     let isModalShowed = false;
 
     jQuery('.subscription-button, .hide-modal').click(function (event) {
         event.preventDefault();
-
+        const courseName = jQuery(this).attr('data-course')
         if (isModalShowed) {
             isModalShowed = false
             jQuery('#Modal').removeClass('showed-modal')
@@ -288,6 +302,8 @@ jQuery(document).ready(function () {
             isModalShowed = true
             jQuery('#Modal').addClass('showed-modal')
         }
+
+        document.getElementById('CourseName').value = courseName
 
     })
 
@@ -315,4 +331,11 @@ jQuery(document).ready(function () {
     //     }
     // })
 
+
+    /*
+    * Trying lesson submit cancel reference
+    * */
+    jQuery('input[type="submit"]').submit(function() {
+        return false;
+    })
 })

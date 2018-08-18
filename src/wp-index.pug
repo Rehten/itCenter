@@ -1,3 +1,6 @@
+-
+    var url = require('./variables-for-templates').url
+
 doctype html
 html(lang='en')
     head
@@ -9,23 +12,23 @@ html(lang='en')
             gtag('config', 'UA-110612076-1');
         meta(charset='UTF-8')
         title Курсы по программированию
-        link(rel='icon', type='image/x-icon', href='./favicon.ico')
+        link(rel='icon', type='image/x-icon', href=url + '/favicon.ico')
     body
         style.
             /*Add fonts*/
             @font-face {
                 font-family: acrom;
                 font-weight: bold;
-                src: url("./fonts/acrom900.otf") format("opentype");
+                src: url("#{url}/fonts/acrom900.otf") format("opentype");
             }
             @font-face {
                 font-family: acrom600;
-                src: url("./fonts/acrom600.otf") format('opentype');
+                src: url("#{url}/fonts/acrom600.otf") format('opentype');
             }
             @font-face {
                 font-family: acrom;
                 font-weight: initial;
-                src: url("./fonts/acrom400.otf") format('opentype');
+                src: url("#{url}/fonts/acrom400.otf") format('opentype');
             }
             body {
                 font-family: acrom, Lucida Grande, sans-serif;
@@ -37,7 +40,7 @@ html(lang='en')
             include pug/shared/header
             include pug/courses-main-page/landing-page
         include pug/shared/why-learn-block
-        include pug/java-osnovi/career-block
+        include pug/shared/career-block
         include pug/shared/for-whoes-block
         include pug/java-osnovi/comments-block
         include pug/shared/recommendations-block
